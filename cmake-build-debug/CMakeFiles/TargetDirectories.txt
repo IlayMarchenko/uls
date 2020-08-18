@@ -1,0 +1,3 @@
+/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/uls_clion.dir
