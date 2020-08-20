@@ -876,6 +876,32 @@ CMakeFiles/uls_clion.dir/src/main/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uls_clion.dir/src/main/main.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/imarchenko/CLionProjects/uls_clion/src/main/main.c -o CMakeFiles/uls_clion.dir/src/main/main.c.s
 
+CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: CMakeFiles/uls_clion.dir/flags.make
+CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../src/flags/mx_check_flags.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o   -c /Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c
+
+CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c > CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.i
+
+CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c -o CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.s
+
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: CMakeFiles/uls_clion.dir/flags.make
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: ../src/additional/mx_alphabet_sort.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o   -c /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c
+
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c > CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.i
+
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c -o CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.s
+
 # Object files for target uls_clion
 uls_clion_OBJECTS = \
 "CMakeFiles/uls_clion.dir/libmx/src/mx_binary_search.c.o" \
@@ -940,7 +966,9 @@ uls_clion_OBJECTS = \
 "CMakeFiles/uls_clion.dir/libmx/src/mx_to_lower.c.o" \
 "CMakeFiles/uls_clion.dir/libmx/src/mx_to_upper.c.o" \
 "CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o" \
-"CMakeFiles/uls_clion.dir/src/main/main.c.o"
+"CMakeFiles/uls_clion.dir/src/main/main.c.o" \
+"CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o" \
+"CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o"
 
 # External object files for target uls_clion
 uls_clion_EXTERNAL_OBJECTS =
@@ -1008,9 +1036,11 @@ uls_clion: CMakeFiles/uls_clion.dir/libmx/src/mx_to_lower.c.o
 uls_clion: CMakeFiles/uls_clion.dir/libmx/src/mx_to_upper.c.o
 uls_clion: CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o
 uls_clion: CMakeFiles/uls_clion.dir/src/main/main.c.o
+uls_clion: CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o
+uls_clion: CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o
 uls_clion: CMakeFiles/uls_clion.dir/build.make
 uls_clion: CMakeFiles/uls_clion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Linking C executable uls_clion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Linking C executable uls_clion"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/uls_clion.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

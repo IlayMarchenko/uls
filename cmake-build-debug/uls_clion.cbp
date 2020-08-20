@@ -83,6 +83,9 @@
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h">
 			<Option target="uls_clion"/>
 		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h">
+			<Option target="uls_clion"/>
+		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/libmx/inc/libmx.h">
 			<Option target="uls_clion"/>
 		</Unit>
@@ -267,6 +270,12 @@
 			<Option target="uls_clion"/>
 		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/libmx/src/mx_to_upper.c">
+			<Option target="uls_clion"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c">
+			<Option target="uls_clion"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c">
 			<Option target="uls_clion"/>
 		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_i.c">

@@ -3,19 +3,19 @@
 static void one_obj(char *obj);
 static char *trim(char *string, char **current_file);
 static void zero_obj();
-static void two_and_more_obj(int number_of_obj, char **array_of_obj);
-static void file_dir_sort(char ***files, char ***dirs, int number_of_obj, char **array_of_obj); //TODO struct to sort all obj to files/non + dirs
+static void two_and_more_obj(t_flags *flags);
+static void file_dir_sort(t_sorted_odj *sort, t_flags *flags);
 
 
-void mx_flag_i(int number_of_obj, char **array_of_obj) { //TODO make three+ obj
-    if (number_of_obj == 1) {
-        one_obj(array_of_obj[2]);
-    }
-    else if (number_of_obj == 0) {
+void mx_flag_i(t_flags *flags) { //TODO make three+ obj
+    if (flags->number_of_obj == 0) {
         zero_obj();
     }
-    else if (number_of_obj >= 2) {
-        two_and_more_obj(number_of_obj, array_of_obj);
+    else if (flags->number_of_obj == 1) {
+        one_obj(flags->all_obj[0]);
+    }
+    else if (flags->number_of_obj > 1) {
+        two_and_more_obj(flags);
     }
 }
 
@@ -107,34 +107,51 @@ static char *trim(char *string, char **current_file) {
     return res;
 }
 
-static void two_and_more_obj(int number_of_obj, char **array_of_obj) { // ./uls -i stage2 test Desktop test1
-    char **files = NULL;
-    char **dirs = NULL;
-    file_dir_sort(&files, &dirs, number_of_obj,array_of_obj);
-//    for (int i = 2; i <= number_of_obj + 1; ++i) {
-//        one_obj(array_of_obj[i]);
-//    }
+static void two_and_more_obj(t_flags *flags) { // ./uls -i stage2 test Desktop test1
+    t_sorted_odj *sort = (t_sorted_odj *)malloc(sizeof(t_sorted_odj));
+    sort->len_of_dirs_array = sort->len_of_files_array = 0;
+    file_dir_sort(sort, flags);
+    mx_alphabet_sort(sort->files, sort->len_of_files_array);
+    mx_alphabet_sort(sort->dirs, sort->len_of_dirs_array);
+    for (int i = 0; i < sort->len_of_files_array; ++i) {
+        one_obj(sort->files[i]);
+    }
+    for (int j = 0; j < sort->len_of_dirs_array; ++j) {
+        mx_printstr(sort->dirs[j]);
+        mx_printstr(":\n");
+        one_obj(sort->dirs[j]);
+        mx_printchar('\n');
+    }
 }
 
-static void file_dir_sort(char ***files, char ***dirs, int number_of_obj, char **array_of_obj) {
+static void file_dir_sort(t_sorted_odj *sort, t_flags *flags) {
     int a = 0;
     int b = 0;
-    *files = (char **)malloc(sizeof(char *) * number_of_obj * 10);
-    *dirs = (char **)malloc(sizeof(char *) * number_of_obj * 10);
-    for (int i = 0; i < number_of_obj; ++i) {
-        *(files[i]) = mx_strnew(10);
-        *(dirs[i]) = mx_strnew(10);
-    }
-    for (int j = 2; j < number_of_obj; ++j) {
-        if (opendir(array_of_obj[j])) {
-            *(dirs[a]) = mx_realloc(*(dirs[a]), mx_strlen(array_of_obj[j]));
-            *(dirs[a]) = mx_strcpy(*(dirs[a]), array_of_obj[j]);
+    sort->files = (char **)malloc(sizeof(char *) * flags->number_of_obj);
+    sort->dirs = (char **)malloc(sizeof(char *) * flags->number_of_obj);
+    for (int i = 0; i < flags->number_of_obj; i++) {
+        if (opendir(flags->all_obj[i])) {
+            sort->dirs[a] = mx_strdup(flags->all_obj[i]);
             a++;
         } else {
-            *(files[b]) = mx_realloc(*(files[b]), mx_strlen(array_of_obj[j]));
-            *(files[b]) = mx_strcpy(*(files[b]), array_of_obj[j]);
+            sort->files[b] = mx_strdup(flags->all_obj[i]);
             b++;
         }
     }
+    for (int j = a; j < flags->number_of_obj; ++j) {
+        sort->dirs[a] = mx_strnew(1);
+    }
+    for (int j = b; j < flags->number_of_obj; ++j) {
+        sort->files[b] = mx_strnew(1);
+    }
+    a = 0;
+    while (sort->dirs[a][0] != '\0') {
+        sort->len_of_dirs_array++;
+    }
+    b = 0;
+    while (sort->files[b][0] != '\0') {
+        sort->len_of_files_array++;
+    }
 }
+
 

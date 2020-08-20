@@ -1770,6 +1770,60 @@ libmx/src/mx_to_upper.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/libmx/src/mx_to_upper.c.s
 .PHONY : libmx/src/mx_to_upper.c.s
 
+src/additional/mx_alphabet_sort.o: src/additional/mx_alphabet_sort.c.o
+
+.PHONY : src/additional/mx_alphabet_sort.o
+
+# target to build an object file
+src/additional/mx_alphabet_sort.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o
+.PHONY : src/additional/mx_alphabet_sort.c.o
+
+src/additional/mx_alphabet_sort.i: src/additional/mx_alphabet_sort.c.i
+
+.PHONY : src/additional/mx_alphabet_sort.i
+
+# target to preprocess a source file
+src/additional/mx_alphabet_sort.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.i
+.PHONY : src/additional/mx_alphabet_sort.c.i
+
+src/additional/mx_alphabet_sort.s: src/additional/mx_alphabet_sort.c.s
+
+.PHONY : src/additional/mx_alphabet_sort.s
+
+# target to generate assembly for a file
+src/additional/mx_alphabet_sort.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.s
+.PHONY : src/additional/mx_alphabet_sort.c.s
+
+src/flags/mx_check_flags.o: src/flags/mx_check_flags.c.o
+
+.PHONY : src/flags/mx_check_flags.o
+
+# target to build an object file
+src/flags/mx_check_flags.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o
+.PHONY : src/flags/mx_check_flags.c.o
+
+src/flags/mx_check_flags.i: src/flags/mx_check_flags.c.i
+
+.PHONY : src/flags/mx_check_flags.i
+
+# target to preprocess a source file
+src/flags/mx_check_flags.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.i
+.PHONY : src/flags/mx_check_flags.c.i
+
+src/flags/mx_check_flags.s: src/flags/mx_check_flags.c.s
+
+.PHONY : src/flags/mx_check_flags.s
+
+# target to generate assembly for a file
+src/flags/mx_check_flags.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.s
+.PHONY : src/flags/mx_check_flags.c.s
+
 src/flags/mx_flag_i.o: src/flags/mx_flag_i.c.o
 
 .PHONY : src/flags/mx_flag_i.o
@@ -2016,6 +2070,12 @@ help:
 	@echo "... libmx/src/mx_to_upper.o"
 	@echo "... libmx/src/mx_to_upper.i"
 	@echo "... libmx/src/mx_to_upper.s"
+	@echo "... src/additional/mx_alphabet_sort.o"
+	@echo "... src/additional/mx_alphabet_sort.i"
+	@echo "... src/additional/mx_alphabet_sort.s"
+	@echo "... src/flags/mx_check_flags.o"
+	@echo "... src/flags/mx_check_flags.i"
+	@echo "... src/flags/mx_check_flags.s"
 	@echo "... src/flags/mx_flag_i.o"
 	@echo "... src/flags/mx_flag_i.i"
 	@echo "... src/flags/mx_flag_i.s"

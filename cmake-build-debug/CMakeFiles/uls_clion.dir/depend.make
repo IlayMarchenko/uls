@@ -184,11 +184,23 @@ CMakeFiles/uls_clion.dir/libmx/src/mx_to_lower.c.o: ../libmx/src/mx_to_lower.c
 CMakeFiles/uls_clion.dir/libmx/src/mx_to_upper.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/libmx/src/mx_to_upper.c.o: ../libmx/src/mx_to_upper.c
 
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: ../src/additional/mx_alphabet_sort.c
+
+CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../src/flags/mx_check_flags.c
+
 CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o: ../src/flags/mx_flag_i.c
 
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/main/main.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../src/main/main.c
 

@@ -70,4 +70,4 @@ add_executable(uls_clion
         libmx/src/mx_to_upper.c
         src/flags/mx_flag_i.c
         src/main/main.c
-        inc/uls_imarchenko.h)
+        inc/uls_imarchenko.h inc/yksuls.h src/flags/mx_check_flags.c src/additional/mx_alphabet_sort.c)

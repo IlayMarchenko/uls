@@ -60,6 +60,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/uls_clion.dir/libmx/src/mx_swap_char.c.o"
   "CMakeFiles/uls_clion.dir/libmx/src/mx_to_lower.c.o"
   "CMakeFiles/uls_clion.dir/libmx/src/mx_to_upper.c.o"
+  "CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o"
+  "CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o"
   "CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o"
   "CMakeFiles/uls_clion.dir/src/main/main.c.o"
   "uls_clion"

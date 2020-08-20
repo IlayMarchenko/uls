@@ -41,8 +41,30 @@ libmx.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/libmx.h
 dirent.h
 -
+yksuls.h
+/Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
+
+/Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
+libmx.h
+/Users/imarchenko/CLionProjects/uls_clion/inc/libmx.h
+dirent.h
+-
+sys/types.h
+-
+
+/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c
+../../inc/uls_imarchenko.h
+/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
+
+/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c
+../../inc/uls_imarchenko.h
+/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
 
 /Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_i.c
+../../inc/uls_imarchenko.h
+/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
+
+/Users/imarchenko/CLionProjects/uls_clion/src/main/main.c
 ../../inc/uls_imarchenko.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
 
