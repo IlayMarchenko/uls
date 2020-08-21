@@ -42,7 +42,7 @@ static void one_obj(char *obj) {
             if (mx_strcmp(directory->d_name, current_file) == 0) {
                 mx_printint(directory->d_ino);
                 mx_printchar(' ');
-                mx_printstr(directory->d_name);
+                mx_printstr(obj);
                 mx_printchar('\n');
             }
         }
@@ -117,10 +117,10 @@ static void two_and_more_obj(t_flags *flags) { // ./uls -i stage2 test Desktop t
         one_obj(sort->files[i]);
     }
     for (int j = 0; j < sort->len_of_dirs_array; ++j) {
+        mx_printchar('\n');
         mx_printstr(sort->dirs[j]);
         mx_printstr(":\n");
         one_obj(sort->dirs[j]);
-        mx_printchar('\n');
     }
 }
 
@@ -147,10 +147,12 @@ static void file_dir_sort(t_sorted_odj *sort, t_flags *flags) {
     a = 0;
     while (sort->dirs[a][0] != '\0') {
         sort->len_of_dirs_array++;
+        a++;
     }
     b = 0;
     while (sort->files[b][0] != '\0') {
         sort->len_of_files_array++;
+        b++;
     }
 }
 

@@ -1797,6 +1797,33 @@ src/additional/mx_alphabet_sort.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.s
 .PHONY : src/additional/mx_alphabet_sort.c.s
 
+src/additional/mx_the_biggest_name.o: src/additional/mx_the_biggest_name.c.o
+
+.PHONY : src/additional/mx_the_biggest_name.o
+
+# target to build an object file
+src/additional/mx_the_biggest_name.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o
+.PHONY : src/additional/mx_the_biggest_name.c.o
+
+src/additional/mx_the_biggest_name.i: src/additional/mx_the_biggest_name.c.i
+
+.PHONY : src/additional/mx_the_biggest_name.i
+
+# target to preprocess a source file
+src/additional/mx_the_biggest_name.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.i
+.PHONY : src/additional/mx_the_biggest_name.c.i
+
+src/additional/mx_the_biggest_name.s: src/additional/mx_the_biggest_name.c.s
+
+.PHONY : src/additional/mx_the_biggest_name.s
+
+# target to generate assembly for a file
+src/additional/mx_the_biggest_name.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.s
+.PHONY : src/additional/mx_the_biggest_name.c.s
+
 src/flags/mx_check_flags.o: src/flags/mx_check_flags.c.o
 
 .PHONY : src/flags/mx_check_flags.o
@@ -1877,6 +1904,33 @@ src/main/main.s: src/main/main.c.s
 src/main/main.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/main/main.c.s
 .PHONY : src/main/main.c.s
+
+src/output/output_by_size_of_wind.o: src/output/output_by_size_of_wind.c.o
+
+.PHONY : src/output/output_by_size_of_wind.o
+
+# target to build an object file
+src/output/output_by_size_of_wind.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o
+.PHONY : src/output/output_by_size_of_wind.c.o
+
+src/output/output_by_size_of_wind.i: src/output/output_by_size_of_wind.c.i
+
+.PHONY : src/output/output_by_size_of_wind.i
+
+# target to preprocess a source file
+src/output/output_by_size_of_wind.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.i
+.PHONY : src/output/output_by_size_of_wind.c.i
+
+src/output/output_by_size_of_wind.s: src/output/output_by_size_of_wind.c.s
+
+.PHONY : src/output/output_by_size_of_wind.s
+
+# target to generate assembly for a file
+src/output/output_by_size_of_wind.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.s
+.PHONY : src/output/output_by_size_of_wind.c.s
 
 # Help Target
 help:
@@ -2073,6 +2127,9 @@ help:
 	@echo "... src/additional/mx_alphabet_sort.o"
 	@echo "... src/additional/mx_alphabet_sort.i"
 	@echo "... src/additional/mx_alphabet_sort.s"
+	@echo "... src/additional/mx_the_biggest_name.o"
+	@echo "... src/additional/mx_the_biggest_name.i"
+	@echo "... src/additional/mx_the_biggest_name.s"
 	@echo "... src/flags/mx_check_flags.o"
 	@echo "... src/flags/mx_check_flags.i"
 	@echo "... src/flags/mx_check_flags.s"
@@ -2082,6 +2139,9 @@ help:
 	@echo "... src/main/main.o"
 	@echo "... src/main/main.i"
 	@echo "... src/main/main.s"
+	@echo "... src/output/output_by_size_of_wind.o"
+	@echo "... src/output/output_by_size_of_wind.i"
+	@echo "... src/output/output_by_size_of_wind.s"
 .PHONY : help
 
 

@@ -4,6 +4,7 @@
 #include "libmx.h"
 #include <dirent.h>
 #include "yksuls.h"
+#include <sys/ioctl.h>
 
 typedef struct s_sorted_obj {
     char **files;
@@ -14,5 +15,6 @@ typedef struct s_sorted_obj {
 
 void mx_flag_i(t_flags *flags);
 void mx_alphabet_sort(char **array, int len);
+int mx_the_biggest_name(char **array, int len);
 
 #endif //ULS_CLION_ULS_IMARCHENKO_H

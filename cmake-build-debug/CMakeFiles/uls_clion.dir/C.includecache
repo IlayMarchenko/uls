@@ -43,6 +43,8 @@ dirent.h
 -
 yksuls.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
+sys/ioctl.h
+-
 
 /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
 libmx.h
@@ -56,6 +58,10 @@ sys/types.h
 ../../inc/uls_imarchenko.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
 
+/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_the_biggest_name.c
+../../inc/uls_imarchenko.h
+/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
+
 /Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c
 ../../inc/uls_imarchenko.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
@@ -65,6 +71,10 @@ sys/types.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
 
 /Users/imarchenko/CLionProjects/uls_clion/src/main/main.c
+../../inc/uls_imarchenko.h
+/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
+
+/Users/imarchenko/CLionProjects/uls_clion/src/output/output_by_size_of_wind.c
 ../../inc/uls_imarchenko.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
 

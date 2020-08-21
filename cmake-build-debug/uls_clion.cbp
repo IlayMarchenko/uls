@@ -275,6 +275,9 @@
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c">
 			<Option target="uls_clion"/>
 		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_the_biggest_name.c">
+			<Option target="uls_clion"/>
+		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c">
 			<Option target="uls_clion"/>
 		</Unit>
@@ -282,6 +285,9 @@
 			<Option target="uls_clion"/>
 		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/main/main.c">
+			<Option target="uls_clion"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/output/output_by_size_of_wind.c">
 			<Option target="uls_clion"/>
 		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/CMakeLists.txt">

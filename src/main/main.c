@@ -17,4 +17,11 @@ int main(int argc, char *argv[]) {
     flags->number_of_obj = 4;
     mx_flag_i(flags);
     mx_check_flags(flags);
+
+    // -------------------------------------
+    struct winsize w;
+    ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+    printf ("\n\ncolumns %d\n", w.ws_col);
+    printf("%d\n", mx_strlen("CMakeCache.txt"));
+    // -------------------------------------
 }

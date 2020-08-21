@@ -189,6 +189,11 @@ CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: ../inc/uls_imarche
 CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o: ../src/additional/mx_alphabet_sort.c
 
+CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o: ../src/additional/mx_the_biggest_name.c
+
 CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../inc/uls_imarchenko.h
 CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../inc/yksuls.h
@@ -203,4 +208,9 @@ CMakeFiles/uls_clion.dir/src/main/main.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../inc/uls_imarchenko.h
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../src/main/main.c
+
+CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o: ../src/output/output_by_size_of_wind.c
 
