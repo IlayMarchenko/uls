@@ -7,7 +7,7 @@ static void two_and_more_obj(t_flags *flags);
 static void file_dir_sort(t_sorted_odj *sort, t_flags *flags);
 
 
-void mx_flag_i(t_flags *flags) { //TODO make three+ obj
+void mx_flag_i(t_flags *flags) {
     if (flags->number_of_obj == 0) {
         zero_obj();
     }
@@ -20,19 +20,35 @@ void mx_flag_i(t_flags *flags) { //TODO make three+ obj
 }
 
 static void one_obj(char *obj) {
+    int len_of_array = 0;
+    int i = 0;
+    char **array = NULL;
     DIR *d;
     struct dirent *directory;
     d = opendir(obj);
     if (d) {
         while ((directory = readdir(d)) != NULL) {
             if (directory->d_name[0] != '.') {
-                mx_printint(directory->d_ino);
-                mx_printchar(' ');
-                mx_printstr(directory->d_name);
-                mx_printchar('\n');
+                len_of_array++;
             }
         }
         closedir(d);
+        d = opendir(obj);
+        array = (char **)malloc(sizeof(char *) * len_of_array);
+        while ((directory = readdir(d)) != NULL) {
+            if (directory->d_name[0] != '.') {
+                array[i] = mx_strnew(directory->d_namlen + mx_intlen(directory->d_ino) + 1);
+                array[i] = mx_strcpy(array[i], mx_itoa(directory->d_ino));
+                array[i] = mx_strcat(array[i], " ");
+                array[i] = mx_strcat(array[i], directory->d_name);
+                i++;
+            }
+        }
+        closedir(d);
+        //mx_alphabet_sort(array, len_of_array);
+        mx_output_by_size_of_wind(array, len_of_array);
+        mx_strdel(&array[len_of_array - 1]);
+        mx_del_strarr(&array);
     }
     else if (open(obj, O_RDONLY) != -1) {
         char *current_file;

@@ -54,26 +54,6 @@ dirent.h
 sys/types.h
 -
 
-/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c
-../../inc/uls_imarchenko.h
-/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
-
-/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_the_biggest_name.c
-../../inc/uls_imarchenko.h
-/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
-
-/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c
-../../inc/uls_imarchenko.h
-/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
-
-/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_i.c
-../../inc/uls_imarchenko.h
-/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
-
-/Users/imarchenko/CLionProjects/uls_clion/src/main/main.c
-../../inc/uls_imarchenko.h
-/Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
-
 /Users/imarchenko/CLionProjects/uls_clion/src/output/output_by_size_of_wind.c
 ../../inc/uls_imarchenko.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h

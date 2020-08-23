@@ -22,6 +22,5 @@ int main(int argc, char *argv[]) {
     struct winsize w;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
     printf ("\n\ncolumns %d\n", w.ws_col);
-    printf("%d\n", mx_strlen("CMakeCache.txt"));
     // -------------------------------------
 }
