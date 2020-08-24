@@ -15,12 +15,12 @@ int main(int argc, char *argv[]) {
         flags->all_obj[j] = mx_strcpy(flags->all_obj[j], argv[j + 2]);
     }
     flags->number_of_obj = 4;
-    mx_flag_i(flags);
-    mx_check_flags(flags);
+    mx_flag_i(flags); // TODO clean 20 leaks
 
     // -------------------------------------
     struct winsize w;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
     printf ("\n\ncolumns %d\n", w.ws_col);
     // -------------------------------------
+    system("leaks -q uls_clion");
 }

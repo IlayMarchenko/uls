@@ -17,5 +17,6 @@ void mx_flag_i(t_flags *flags);
 void mx_alphabet_sort(char **array, int len);
 int mx_the_biggest_name(char **array, int len);
 void mx_output_by_size_of_wind(char **array, int len_of_array);
+void mx_alphabet_sort2(char **array, int len);
 
 #endif //ULS_CLION_ULS_IMARCHENKO_H

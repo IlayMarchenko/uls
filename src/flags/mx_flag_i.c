@@ -2,14 +2,14 @@
 
 static void one_obj(char *obj);
 static char *trim(char *string, char **current_file);
-static void zero_obj();
+static void add_inode_to_name_of_file(t_sorted_odj *sort);
 static void two_and_more_obj(t_flags *flags);
 static void file_dir_sort(t_sorted_odj *sort, t_flags *flags);
 
 
 void mx_flag_i(t_flags *flags) {
     if (flags->number_of_obj == 0) {
-        zero_obj();
+        one_obj(".");
     }
     else if (flags->number_of_obj == 1) {
         one_obj(flags->all_obj[0]);
@@ -45,7 +45,7 @@ static void one_obj(char *obj) {
             }
         }
         closedir(d);
-        //mx_alphabet_sort(array, len_of_array);
+        mx_alphabet_sort2(array, len_of_array);
         mx_output_by_size_of_wind(array, len_of_array);
         mx_strdel(&array[len_of_array - 1]);
         mx_del_strarr(&array);
@@ -65,28 +65,6 @@ static void one_obj(char *obj) {
         closedir(d);
         mx_strdel(&current_dir);
         mx_strdel(&current_file);
-    }
-    else {
-        mx_printerr("ls: ");
-        mx_printerr(obj);
-        mx_printerr(": No such file or directory");
-    }
-}
-
-static void zero_obj() {
-    DIR *d;
-    struct dirent *directory;
-    d = opendir(".");
-    if (d) {
-        while ((directory = readdir(d)) != NULL) {
-            if (directory->d_name[0] != '.') {
-                mx_printint(directory->d_ino);
-                mx_printchar(' ');
-                mx_printstr(directory->d_name);
-                mx_printchar('\n');
-            }
-        }
-        closedir(d);
     }
 }
 
@@ -129,15 +107,19 @@ static void two_and_more_obj(t_flags *flags) { // ./uls -i stage2 test Desktop t
     file_dir_sort(sort, flags);
     mx_alphabet_sort(sort->files, sort->len_of_files_array);
     mx_alphabet_sort(sort->dirs, sort->len_of_dirs_array);
-    for (int i = 0; i < sort->len_of_files_array; ++i) {
-        one_obj(sort->files[i]);
-    }
+    add_inode_to_name_of_file(sort);
+    mx_output_by_size_of_wind(sort->files, sort->len_of_files_array);
     for (int j = 0; j < sort->len_of_dirs_array; ++j) {
         mx_printchar('\n');
         mx_printstr(sort->dirs[j]);
         mx_printstr(":\n");
         one_obj(sort->dirs[j]);
     }
+    mx_strdel(&sort->files[sort->len_of_files_array - 1]);
+    mx_strdel(&sort->dirs[sort->len_of_dirs_array - 1]);
+    mx_del_strarr(&sort->files);
+    mx_del_strarr(&sort->dirs);
+    free(sort);
 }
 
 static void file_dir_sort(t_sorted_odj *sort, t_flags *flags) {
@@ -172,4 +154,30 @@ static void file_dir_sort(t_sorted_odj *sort, t_flags *flags) {
     }
 }
 
-
+static void add_inode_to_name_of_file(t_sorted_odj *sort) {
+    char **array = (char **)malloc(sizeof(char *) * sort->len_of_files_array);
+    DIR *d;
+    struct dirent *directory;
+    for (int i = 0; i < sort->len_of_files_array; ++i) {
+        char *current_file;
+        char *current_dir = trim(sort->files[i], &current_file);
+        d = opendir(current_dir);
+        while ((directory = readdir(d)) != NULL) {
+            if (mx_strcmp(directory->d_name, current_file) == 0) {
+                array[i] = mx_strnew(directory->d_namlen + mx_intlen(directory->d_ino) + 1);
+                array[i] = mx_strcpy(array[i], mx_itoa(directory->d_ino));
+                array[i] = mx_strcat(array[i], " ");
+                array[i] = mx_strcat(array[i], sort->files[i]);
+            }
+        }
+        closedir(d);
+        mx_strdel(&current_dir);
+        mx_strdel(&current_file);
+    }
+    for (int j = 0; j < sort->len_of_files_array; ++j) {
+        mx_strdel(&sort->files[j]);
+        sort->files[j] = mx_strdup(array[j]);
+        mx_strdel(&array[j]);
+    }
+    mx_del_strarr(&array);
+}

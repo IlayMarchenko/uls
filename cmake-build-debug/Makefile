@@ -1797,6 +1797,33 @@ src/additional/mx_alphabet_sort.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.s
 .PHONY : src/additional/mx_alphabet_sort.c.s
 
+src/additional/mx_alphabet_sort2.o: src/additional/mx_alphabet_sort2.c.o
+
+.PHONY : src/additional/mx_alphabet_sort2.o
+
+# target to build an object file
+src/additional/mx_alphabet_sort2.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o
+.PHONY : src/additional/mx_alphabet_sort2.c.o
+
+src/additional/mx_alphabet_sort2.i: src/additional/mx_alphabet_sort2.c.i
+
+.PHONY : src/additional/mx_alphabet_sort2.i
+
+# target to preprocess a source file
+src/additional/mx_alphabet_sort2.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.i
+.PHONY : src/additional/mx_alphabet_sort2.c.i
+
+src/additional/mx_alphabet_sort2.s: src/additional/mx_alphabet_sort2.c.s
+
+.PHONY : src/additional/mx_alphabet_sort2.s
+
+# target to generate assembly for a file
+src/additional/mx_alphabet_sort2.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.s
+.PHONY : src/additional/mx_alphabet_sort2.c.s
+
 src/additional/mx_the_biggest_name.o: src/additional/mx_the_biggest_name.c.o
 
 .PHONY : src/additional/mx_the_biggest_name.o
@@ -2127,6 +2154,9 @@ help:
 	@echo "... src/additional/mx_alphabet_sort.o"
 	@echo "... src/additional/mx_alphabet_sort.i"
 	@echo "... src/additional/mx_alphabet_sort.s"
+	@echo "... src/additional/mx_alphabet_sort2.o"
+	@echo "... src/additional/mx_alphabet_sort2.i"
+	@echo "... src/additional/mx_alphabet_sort2.s"
 	@echo "... src/additional/mx_the_biggest_name.o"
 	@echo "... src/additional/mx_the_biggest_name.i"
 	@echo "... src/additional/mx_the_biggest_name.s"

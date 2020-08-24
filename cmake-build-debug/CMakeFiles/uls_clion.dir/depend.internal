@@ -189,6 +189,11 @@ CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o
  /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
  /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
  /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c
+CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o
+ ../libmx/inc/libmx.h
+ /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
+ /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
+ /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort2.c
 CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o
  ../libmx/inc/libmx.h
  /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h

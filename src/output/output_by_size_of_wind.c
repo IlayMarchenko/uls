@@ -7,12 +7,15 @@ void mx_output_by_size_of_wind(char **array, int len_of_array) {
     int length_of_line = 0;
     struct winsize window;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &window);
-    //window.ws_col = 97;
-    int max_len = mx_the_biggest_name(array, len_of_array);
+    window.ws_col = 68;
+    int max_len = mx_the_biggest_name(array, len_of_array) + 4;
     if (max_len % 8 != 0) {
         while (max_len % 8 != 0) {
             max_len++;
         }
+    }
+    if (max_len >= window.ws_col) {
+        window.ws_col = max_len + 1;
     }
     if (max_len * len_of_array <= window.ws_col) {
         one_line_output(array, len_of_array, max_len);
