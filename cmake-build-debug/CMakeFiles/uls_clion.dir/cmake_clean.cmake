@@ -62,6 +62,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/uls_clion.dir/libmx/src/mx_to_upper.c.o"
   "CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o"
   "CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o"
+  "CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o"
   "CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o"
   "CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o"
   "CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o"

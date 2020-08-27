@@ -194,6 +194,11 @@ CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o
  /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
  /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
  /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort2.c
+CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o
+ ../libmx/inc/libmx.h
+ /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
+ /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
+ /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_max_len_of_inode.c
 CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o
  ../libmx/inc/libmx.h
  /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h

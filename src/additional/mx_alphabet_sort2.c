@@ -20,9 +20,12 @@ void mx_alphabet_sort2(char **array, int len) {
                 temp_str = array[i];
                 array[i] = array[j];
                 array[j] = temp_str;
+                array[i] -= count_j;
+                array[j] -= count_i;
+            } else {
+                array[i] -= count_i;
+                array[j] -= count_j;
             }
-            array[i] -= count_i;
-            array[j] -= count_j;
             count_i = count_j = 0;
         }
     }

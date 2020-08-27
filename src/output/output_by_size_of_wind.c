@@ -4,10 +4,9 @@ static void one_line_output(char **array, int len_of_array, int max_len);
 static void multiple_line_output(char **array, int len_of_array, int max_len, struct winsize window);
 
 void mx_output_by_size_of_wind(char **array, int len_of_array) {
-    int length_of_line = 0;
     struct winsize window;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &window);
-    window.ws_col = 68;
+    //window.ws_col = 68;
     int max_len = mx_the_biggest_name(array, len_of_array) + 4;
     if (max_len % 8 != 0) {
         while (max_len % 8 != 0) {

@@ -67,6 +67,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/imarchenko/CLionProjects/uls_clion/libmx/src/mx_to_upper.c" "/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/uls_clion.dir/libmx/src/mx_to_upper.c.o"
   "/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort.c" "/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort.c.o"
   "/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort2.c" "/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o"
+  "/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_max_len_of_inode.c" "/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o"
   "/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_the_biggest_name.c" "/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o"
   "/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c" "/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o"
   "/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_i.c" "/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o"

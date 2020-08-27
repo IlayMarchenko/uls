@@ -278,6 +278,9 @@
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort2.c">
 			<Option target="uls_clion"/>
 		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_max_len_of_inode.c">
+			<Option target="uls_clion"/>
+		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_the_biggest_name.c">
 			<Option target="uls_clion"/>
 		</Unit>

@@ -70,4 +70,4 @@ add_executable(uls_clion
         libmx/src/mx_to_upper.c
         src/flags/mx_flag_i.c
         src/main/main.c
-        inc/uls_imarchenko.h inc/yksuls.h src/flags/mx_check_flags.c src/additional/mx_alphabet_sort.c src/output/output_by_size_of_wind.c src/additional/mx_the_biggest_name.c src/additional/mx_alphabet_sort2.c)
+        inc/uls_imarchenko.h inc/yksuls.h src/flags/mx_check_flags.c src/additional/mx_alphabet_sort.c src/output/output_by_size_of_wind.c src/additional/mx_the_biggest_name.c src/additional/mx_alphabet_sort2.c src/additional/mx_max_len_of_inode.c)
