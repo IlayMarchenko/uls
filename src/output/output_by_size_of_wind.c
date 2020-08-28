@@ -6,8 +6,20 @@ static void multiple_line_output(char **array, int len_of_array, int max_len, st
 void mx_output_by_size_of_wind(char **array, int len_of_array) {
     struct winsize window;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &window);
-    //window.ws_col = 68;
-    int max_len = mx_the_biggest_name(array, len_of_array) + 4;
+    //window.ws_col = 93;
+    int max_len = mx_the_biggest_name(array, len_of_array);
+    if ((max_len + 1) % 8 == 0) {
+        max_len++;
+    }
+    else if ((max_len + 2) % 8 == 0) {
+        max_len += 2;
+    }
+    else if ((max_len + 3) % 8 == 0) {
+        max_len += 3;
+    }
+    else {
+        max_len += 4;
+    }
     if (max_len % 8 != 0) {
         while (max_len % 8 != 0) {
             max_len++;
@@ -38,10 +50,15 @@ static void one_line_output(char **array, int len_of_array, int max_len) {
 }
 
 static void multiple_line_output(char **array, int len_of_array, int max_len, struct winsize window) {
-    int number_of_col = len_of_array / 2 + 1;
+    int number_of_col = 0;
     int number_objs_in_col = 0;
     int temp = 0;
     int k = 0;
+    if (len_of_array % 2 == 0) {
+        number_of_col = len_of_array / 2;
+    } else {
+        number_of_col = len_of_array / 2 + 1;
+    }
     while (true) {
         if (number_of_col * max_len <= window.ws_col) {
             break;

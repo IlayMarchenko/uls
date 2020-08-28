@@ -52,7 +52,7 @@ static void one_obj(char *obj) {
                         }
                     }
                 }
-                array[i] = mx_strcat(array[i], mx_itoa(directory->d_ino)); // TODO find length of the biggest inode number
+                array[i] = mx_strcat(array[i], mx_itoa(directory->d_ino));
                 array[i] = mx_strcat(array[i], " ");
                 array[i] = mx_strcat(array[i], directory->d_name);
                 i++;
@@ -103,12 +103,19 @@ static void two_and_more_obj(t_flags *flags) {
     t_sorted_odj *sort = (t_sorted_odj *)malloc(sizeof(t_sorted_odj));
     sort->len_of_dirs_array = sort->len_of_files_array = 0;
     file_dir_sort(sort, flags); // 4 leaks
-    mx_alphabet_sort(sort->files, sort->len_of_files_array);
-    mx_alphabet_sort(sort->dirs, sort->len_of_dirs_array);
+    if (sort->len_of_files_array != 0) {
+        mx_alphabet_sort(sort->files, sort->len_of_files_array);
+    }
+    if (sort->len_of_dirs_array != 0) {
+        mx_alphabet_sort(sort->dirs, sort->len_of_dirs_array);
+    }
     add_inode_to_name_of_file(sort); // 2 leaks
-    mx_output_by_size_of_wind(sort->files, sort->len_of_files_array);
+    if (sort->len_of_files_array != 0) {
+        mx_output_by_size_of_wind(sort->files, sort->len_of_files_array);
+    }
     for (int j = 0; j < sort->len_of_dirs_array; ++j) {
-        mx_printchar('\n');
+        if (j != 0 || sort->len_of_files_array != 0)
+            mx_printchar('\n');
         mx_printstr(sort->dirs[j]);
         mx_printstr(":\n");
         one_obj(sort->dirs[j]); // 5 leaks * sort->len_of_dirs_array
@@ -124,8 +131,8 @@ static void file_dir_sort(t_sorted_odj *sort, t_flags *flags) {
     int b = 0;
     int c = 0;
     int d = 0;
-    sort->files = (char **)malloc(sizeof(char *) * flags->number_of_obj); // NO
-    sort->dirs = (char **)malloc(sizeof(char *) * flags->number_of_obj); // NO
+    sort->files = (char **)malloc(sizeof(char *) * flags->number_of_obj + 1); // NO
+    sort->dirs = (char **)malloc(sizeof(char *) * flags->number_of_obj + 1); // NO
     for (int i = 0; i < flags->number_of_obj; i++) {
         if (opendir(flags->all_obj[i])) {
             sort->dirs[a] = mx_strdup(flags->all_obj[i]);
@@ -135,10 +142,10 @@ static void file_dir_sort(t_sorted_odj *sort, t_flags *flags) {
             b++;
         }
     }
-    for (int j = a; j < flags->number_of_obj; ++j) {
+    for (int j = a; j < flags->number_of_obj + 1; ++j) {
         sort->dirs[a] = NULL;
     }
-    for (int j = b; j < flags->number_of_obj; ++j) {
+    for (int j = b; j < flags->number_of_obj + 1; ++j) {
         sort->files[b] = NULL;
     }
     while (sort->dirs[c] != NULL) {
