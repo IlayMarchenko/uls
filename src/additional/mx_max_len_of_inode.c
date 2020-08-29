@@ -14,5 +14,6 @@ int mx_max_len_of_inode(char *obj) {
             }
         }
     }
+    closedir(d);
     return res;
 }

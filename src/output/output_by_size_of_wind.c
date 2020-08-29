@@ -2,24 +2,14 @@
 
 static void one_line_output(char **array, int len_of_array, int max_len);
 static void multiple_line_output(char **array, int len_of_array, int max_len, struct winsize window);
+static int change_max_len(int max_len);
 
 void mx_output_by_size_of_wind(char **array, int len_of_array) {
     struct winsize window;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &window);
-    //window.ws_col = 93;
+    //window.ws_col = 90;
     int max_len = mx_the_biggest_name(array, len_of_array);
-    if ((max_len + 1) % 8 == 0) {
-        max_len++;
-    }
-    else if ((max_len + 2) % 8 == 0) {
-        max_len += 2;
-    }
-    else if ((max_len + 3) % 8 == 0) {
-        max_len += 3;
-    }
-    else {
-        max_len += 4;
-    }
+    max_len = change_max_len(max_len);
     if (max_len % 8 != 0) {
         while (max_len % 8 != 0) {
             max_len++;
@@ -30,7 +20,8 @@ void mx_output_by_size_of_wind(char **array, int len_of_array) {
     }
     if (max_len * len_of_array <= window.ws_col) {
         one_line_output(array, len_of_array, max_len);
-    } else {
+    }
+    else {
         multiple_line_output(array, len_of_array, max_len, window);
     }
 }
@@ -99,4 +90,20 @@ static void multiple_line_output(char **array, int len_of_array, int max_len, st
         }
         mx_printchar('\n');
     }
+}
+
+static int change_max_len(int max_len) {
+    if ((max_len + 1) % 8 == 0) {
+        max_len++;
+    }
+    else if ((max_len + 2) % 8 == 0) {
+        max_len += 2;
+    }
+    else if ((max_len + 3) % 8 == 0) {
+        max_len += 3;
+    }
+    else {
+        max_len += 4;
+    }
+    return max_len;
 }

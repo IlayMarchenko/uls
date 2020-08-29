@@ -14,13 +14,14 @@ int main(int argc, char *argv[]) {
     for (int j = 0; j < 4; ++j) {
         flags->all_obj[j] = mx_strcpy(flags->all_obj[j], argv[j + 2]);
     }
-    flags->number_of_obj = 1;
-    mx_flag_i(flags); // TODO clean 16 leaks
-//
+    flags->number_of_obj = 4;
+    mx_flag_i(flags);
+
 //    // -------------------------------------
 //    struct winsize w;
 //    ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
 //    printf ("\n\ncolumns %d\n", w.ws_col);
 //    // -------------------------------------
-    //system("leaks -q uls_clion");
+//    mx_printchar('\n');
+//    system("leaks -q uls_clion");
 }
