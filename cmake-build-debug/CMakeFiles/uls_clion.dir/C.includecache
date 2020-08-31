@@ -54,7 +54,7 @@ dirent.h
 sys/types.h
 -
 
-/Users/imarchenko/CLionProjects/uls_clion/src/main/main.c
+/Users/imarchenko/CLionProjects/uls_clion/src/output/mx_output_in_one_column.c
 ../../inc/uls_imarchenko.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
 

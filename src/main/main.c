@@ -14,13 +14,19 @@ int main(int argc, char *argv[]) {
     for (int j = 0; j < 4; ++j) {
         flags->all_obj[j] = mx_strcpy(flags->all_obj[j], argv[j + 2]);
     }
-    flags->number_of_obj = 4;
-    mx_flag_i(flags);
+    flags->number_of_obj = 1;
+    if (mx_strcmp(argv[1], "-i") == 0)
+        mx_flag_i(flags);
+    else if (mx_strcmp(argv[1], "-p") == 0)
+        mx_flag_p(flags);
+    else
+        mx_printstr("sorry, such flag doesn't work yet...\n");
+
 
 //    // -------------------------------------
 //    struct winsize w;
 //    ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
-//    printf ("\n\ncolumns %d\n", w.ws_col);
+//    printf("\n\ncolumns %d\n", w.ws_col);
 //    // -------------------------------------
 //    mx_printchar('\n');
 //    system("leaks -q uls_clion");

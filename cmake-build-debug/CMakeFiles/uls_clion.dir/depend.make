@@ -194,6 +194,11 @@ CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o: ../inc/uls_imarch
 CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o: ../src/additional/mx_alphabet_sort2.c
 
+CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o: ../src/additional/mx_file_dir_sort.c
+
 CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o: ../inc/uls_imarchenko.h
 CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o: ../inc/yksuls.h
@@ -214,10 +219,20 @@ CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o: ../inc/uls_imarchenko.h
 CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o: ../src/flags/mx_flag_i.c
 
+CMakeFiles/uls_clion.dir/src/flags/mx_flag_p.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/flags/mx_flag_p.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/flags/mx_flag_p.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/flags/mx_flag_p.c.o: ../src/flags/mx_flag_p.c
+
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../inc/uls_imarchenko.h
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/main/main.c.o: ../src/main/main.c
+
+CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o: ../src/output/mx_output_in_one_column.c
 
 CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o: ../inc/uls_imarchenko.h

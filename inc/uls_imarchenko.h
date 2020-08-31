@@ -13,11 +13,18 @@ typedef struct s_sorted_obj {
     int len_of_dirs_array;
 }              t_sorted_odj;
 
+
 void mx_flag_i(t_flags *flags);
-void mx_alphabet_sort(char **array, int len);
-int mx_the_biggest_name(char **array, int len);
+void mx_flag_p(t_flags *flags);
+
+void mx_output_in_one_column(char **array, int len_of_array);
 void mx_output_by_size_of_wind(char **array, int len_of_array);
+
+void mx_alphabet_sort(char **array, int len);
 void mx_alphabet_sort2(char **array, int len);
+
+int mx_the_biggest_name(char **array, int len);
 int mx_max_len_of_inode(char *obj);
+void mx_file_dir_sort(t_sorted_odj *sort, t_flags *flags);
 
 #endif //ULS_CLION_ULS_IMARCHENKO_H

@@ -1824,6 +1824,33 @@ src/additional/mx_alphabet_sort2.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.s
 .PHONY : src/additional/mx_alphabet_sort2.c.s
 
+src/additional/mx_file_dir_sort.o: src/additional/mx_file_dir_sort.c.o
+
+.PHONY : src/additional/mx_file_dir_sort.o
+
+# target to build an object file
+src/additional/mx_file_dir_sort.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o
+.PHONY : src/additional/mx_file_dir_sort.c.o
+
+src/additional/mx_file_dir_sort.i: src/additional/mx_file_dir_sort.c.i
+
+.PHONY : src/additional/mx_file_dir_sort.i
+
+# target to preprocess a source file
+src/additional/mx_file_dir_sort.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.i
+.PHONY : src/additional/mx_file_dir_sort.c.i
+
+src/additional/mx_file_dir_sort.s: src/additional/mx_file_dir_sort.c.s
+
+.PHONY : src/additional/mx_file_dir_sort.s
+
+# target to generate assembly for a file
+src/additional/mx_file_dir_sort.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.s
+.PHONY : src/additional/mx_file_dir_sort.c.s
+
 src/additional/mx_max_len_of_inode.o: src/additional/mx_max_len_of_inode.c.o
 
 .PHONY : src/additional/mx_max_len_of_inode.o
@@ -1932,6 +1959,33 @@ src/flags/mx_flag_i.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.s
 .PHONY : src/flags/mx_flag_i.c.s
 
+src/flags/mx_flag_p.o: src/flags/mx_flag_p.c.o
+
+.PHONY : src/flags/mx_flag_p.o
+
+# target to build an object file
+src/flags/mx_flag_p.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_flag_p.c.o
+.PHONY : src/flags/mx_flag_p.c.o
+
+src/flags/mx_flag_p.i: src/flags/mx_flag_p.c.i
+
+.PHONY : src/flags/mx_flag_p.i
+
+# target to preprocess a source file
+src/flags/mx_flag_p.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_flag_p.c.i
+.PHONY : src/flags/mx_flag_p.c.i
+
+src/flags/mx_flag_p.s: src/flags/mx_flag_p.c.s
+
+.PHONY : src/flags/mx_flag_p.s
+
+# target to generate assembly for a file
+src/flags/mx_flag_p.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_flag_p.c.s
+.PHONY : src/flags/mx_flag_p.c.s
+
 src/main/main.o: src/main/main.c.o
 
 .PHONY : src/main/main.o
@@ -1958,6 +2012,33 @@ src/main/main.s: src/main/main.c.s
 src/main/main.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/main/main.c.s
 .PHONY : src/main/main.c.s
+
+src/output/mx_output_in_one_column.o: src/output/mx_output_in_one_column.c.o
+
+.PHONY : src/output/mx_output_in_one_column.o
+
+# target to build an object file
+src/output/mx_output_in_one_column.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o
+.PHONY : src/output/mx_output_in_one_column.c.o
+
+src/output/mx_output_in_one_column.i: src/output/mx_output_in_one_column.c.i
+
+.PHONY : src/output/mx_output_in_one_column.i
+
+# target to preprocess a source file
+src/output/mx_output_in_one_column.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.i
+.PHONY : src/output/mx_output_in_one_column.c.i
+
+src/output/mx_output_in_one_column.s: src/output/mx_output_in_one_column.c.s
+
+.PHONY : src/output/mx_output_in_one_column.s
+
+# target to generate assembly for a file
+src/output/mx_output_in_one_column.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.s
+.PHONY : src/output/mx_output_in_one_column.c.s
 
 src/output/output_by_size_of_wind.o: src/output/output_by_size_of_wind.c.o
 
@@ -2184,6 +2265,9 @@ help:
 	@echo "... src/additional/mx_alphabet_sort2.o"
 	@echo "... src/additional/mx_alphabet_sort2.i"
 	@echo "... src/additional/mx_alphabet_sort2.s"
+	@echo "... src/additional/mx_file_dir_sort.o"
+	@echo "... src/additional/mx_file_dir_sort.i"
+	@echo "... src/additional/mx_file_dir_sort.s"
 	@echo "... src/additional/mx_max_len_of_inode.o"
 	@echo "... src/additional/mx_max_len_of_inode.i"
 	@echo "... src/additional/mx_max_len_of_inode.s"
@@ -2196,9 +2280,15 @@ help:
 	@echo "... src/flags/mx_flag_i.o"
 	@echo "... src/flags/mx_flag_i.i"
 	@echo "... src/flags/mx_flag_i.s"
+	@echo "... src/flags/mx_flag_p.o"
+	@echo "... src/flags/mx_flag_p.i"
+	@echo "... src/flags/mx_flag_p.s"
 	@echo "... src/main/main.o"
 	@echo "... src/main/main.i"
 	@echo "... src/main/main.s"
+	@echo "... src/output/mx_output_in_one_column.o"
+	@echo "... src/output/mx_output_in_one_column.i"
+	@echo "... src/output/mx_output_in_one_column.s"
 	@echo "... src/output/output_by_size_of_wind.o"
 	@echo "... src/output/output_by_size_of_wind.i"
 	@echo "... src/output/output_by_size_of_wind.s"

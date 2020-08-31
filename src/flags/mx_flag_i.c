@@ -4,8 +4,6 @@ static void one_obj(char *obj);
 static char *trim(char *string, char **current_file);
 static void add_inode_to_name_of_file(t_sorted_odj *sort);
 static void two_and_more_obj(t_flags *flags);
-static void file_dir_sort(t_sorted_odj *sort, t_flags *flags);
-
 
 void mx_flag_i(t_flags *flags) {
     if (flags->number_of_obj == 0) {
@@ -109,7 +107,7 @@ static char *trim(char *string, char **current_file) {
 static void two_and_more_obj(t_flags *flags) {
     t_sorted_odj *sort = (t_sorted_odj *)malloc(sizeof(t_sorted_odj));
     sort->len_of_dirs_array = sort->len_of_files_array = 0;
-    file_dir_sort(sort, flags);
+    mx_file_dir_sort(sort, flags);
     if (sort->len_of_files_array != 0) {
         mx_alphabet_sort(sort->files, sort->len_of_files_array);
         add_inode_to_name_of_file(sort);
@@ -130,41 +128,6 @@ static void two_and_more_obj(t_flags *flags) {
     mx_del_strarr(&sort->files);
     mx_del_strarr(&sort->dirs);
     free(sort);
-
-}
-
-static void file_dir_sort(t_sorted_odj *sort, t_flags *flags) {
-    int a = 0;
-    int b = 0;
-    int c = 0;
-    int d = 0;
-    DIR *dir;
-    sort->files = (char **)malloc(sizeof(char *) * flags->number_of_obj + 1); // NO
-    sort->dirs = (char **)malloc(sizeof(char *) * flags->number_of_obj + 1); // NO
-    for (int i = 0; i < flags->number_of_obj; i++) {
-        if ((dir = opendir(flags->all_obj[i]))) {
-            sort->dirs[a] = mx_strdup(flags->all_obj[i]);
-            a++;
-            closedir(dir);
-        } else {
-            sort->files[b] = mx_strdup(flags->all_obj[i]);
-            b++;
-        }
-    }
-    for (int j = a; j < flags->number_of_obj + 1; ++j) {
-        sort->dirs[a] = NULL;
-    }
-    for (int j = b; j < flags->number_of_obj + 1; ++j) {
-        sort->files[b] = NULL;
-    }
-    while (sort->dirs[c] != NULL) {
-        sort->len_of_dirs_array++;
-        c++;
-    }
-    while (sort->files[d] != NULL) {
-        sort->len_of_files_array++;
-        d++;
-    }
 }
 
 static void add_inode_to_name_of_file(t_sorted_odj *sort) {
@@ -178,7 +141,7 @@ static void add_inode_to_name_of_file(t_sorted_odj *sort) {
         d = opendir(current_dir);
         while ((directory = readdir(d)) != NULL) {
             if (mx_strcmp(directory->d_name, current_file) == 0) {
-                array[i] = mx_strnew(directory->d_namlen + mx_intlen(directory->d_ino) + 1);
+                array[i] = mx_strnew(mx_strlen(sort->files[i]) + mx_intlen(directory->d_ino) + 1);
                 inode = mx_itoa(directory->d_ino);
                 array[i] = mx_strcpy(array[i], inode);
                 array[i] = mx_strcat(array[i], " ");
