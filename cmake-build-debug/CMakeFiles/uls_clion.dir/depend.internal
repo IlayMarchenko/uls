@@ -194,6 +194,11 @@ CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.o
  /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
  /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
  /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort2.c
+CMakeFiles/uls_clion.dir/src/additional/mx_conver_bytes.c.o
+ ../libmx/inc/libmx.h
+ /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
+ /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
+ /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_conver_bytes.c
 CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o
  ../libmx/inc/libmx.h
  /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
@@ -214,6 +219,11 @@ CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o
  /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
  /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
  /Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c
+CMakeFiles/uls_clion.dir/src/flags/mx_flag_h.c.o
+ ../libmx/inc/libmx.h
+ /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
+ /Users/imarchenko/CLionProjects/uls_clion/inc/yksuls.h
+ /Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_h.c
 CMakeFiles/uls_clion.dir/src/flags/mx_flag_i.c.o
  ../libmx/inc/libmx.h
  /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h

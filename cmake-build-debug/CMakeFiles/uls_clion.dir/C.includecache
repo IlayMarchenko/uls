@@ -53,8 +53,22 @@ dirent.h
 -
 sys/types.h
 -
+sys/stat.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/xattr.h
+-
+pwd.h
+-
+time.h
+-
+sys/ioctl.h
+-
 
-/Users/imarchenko/CLionProjects/uls_clion/src/output/mx_output_in_one_column.c
+/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_h.c
 ../../inc/uls_imarchenko.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
 

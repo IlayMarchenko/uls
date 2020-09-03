@@ -1824,6 +1824,33 @@ src/additional/mx_alphabet_sort2.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_alphabet_sort2.c.s
 .PHONY : src/additional/mx_alphabet_sort2.c.s
 
+src/additional/mx_conver_bytes.o: src/additional/mx_conver_bytes.c.o
+
+.PHONY : src/additional/mx_conver_bytes.o
+
+# target to build an object file
+src/additional/mx_conver_bytes.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_conver_bytes.c.o
+.PHONY : src/additional/mx_conver_bytes.c.o
+
+src/additional/mx_conver_bytes.i: src/additional/mx_conver_bytes.c.i
+
+.PHONY : src/additional/mx_conver_bytes.i
+
+# target to preprocess a source file
+src/additional/mx_conver_bytes.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_conver_bytes.c.i
+.PHONY : src/additional/mx_conver_bytes.c.i
+
+src/additional/mx_conver_bytes.s: src/additional/mx_conver_bytes.c.s
+
+.PHONY : src/additional/mx_conver_bytes.s
+
+# target to generate assembly for a file
+src/additional/mx_conver_bytes.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_conver_bytes.c.s
+.PHONY : src/additional/mx_conver_bytes.c.s
+
 src/additional/mx_file_dir_sort.o: src/additional/mx_file_dir_sort.c.o
 
 .PHONY : src/additional/mx_file_dir_sort.o
@@ -1931,6 +1958,33 @@ src/flags/mx_check_flags.s: src/flags/mx_check_flags.c.s
 src/flags/mx_check_flags.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.s
 .PHONY : src/flags/mx_check_flags.c.s
+
+src/flags/mx_flag_h.o: src/flags/mx_flag_h.c.o
+
+.PHONY : src/flags/mx_flag_h.o
+
+# target to build an object file
+src/flags/mx_flag_h.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_flag_h.c.o
+.PHONY : src/flags/mx_flag_h.c.o
+
+src/flags/mx_flag_h.i: src/flags/mx_flag_h.c.i
+
+.PHONY : src/flags/mx_flag_h.i
+
+# target to preprocess a source file
+src/flags/mx_flag_h.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_flag_h.c.i
+.PHONY : src/flags/mx_flag_h.c.i
+
+src/flags/mx_flag_h.s: src/flags/mx_flag_h.c.s
+
+.PHONY : src/flags/mx_flag_h.s
+
+# target to generate assembly for a file
+src/flags/mx_flag_h.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/flags/mx_flag_h.c.s
+.PHONY : src/flags/mx_flag_h.c.s
 
 src/flags/mx_flag_i.o: src/flags/mx_flag_i.c.o
 
@@ -2265,6 +2319,9 @@ help:
 	@echo "... src/additional/mx_alphabet_sort2.o"
 	@echo "... src/additional/mx_alphabet_sort2.i"
 	@echo "... src/additional/mx_alphabet_sort2.s"
+	@echo "... src/additional/mx_conver_bytes.o"
+	@echo "... src/additional/mx_conver_bytes.i"
+	@echo "... src/additional/mx_conver_bytes.s"
 	@echo "... src/additional/mx_file_dir_sort.o"
 	@echo "... src/additional/mx_file_dir_sort.i"
 	@echo "... src/additional/mx_file_dir_sort.s"
@@ -2277,6 +2334,9 @@ help:
 	@echo "... src/flags/mx_check_flags.o"
 	@echo "... src/flags/mx_check_flags.i"
 	@echo "... src/flags/mx_check_flags.s"
+	@echo "... src/flags/mx_flag_h.o"
+	@echo "... src/flags/mx_flag_h.i"
+	@echo "... src/flags/mx_flag_h.s"
 	@echo "... src/flags/mx_flag_i.o"
 	@echo "... src/flags/mx_flag_i.i"
 	@echo "... src/flags/mx_flag_i.s"

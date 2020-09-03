@@ -278,6 +278,9 @@
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_alphabet_sort2.c">
 			<Option target="uls_clion"/>
 		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_conver_bytes.c">
+			<Option target="uls_clion"/>
+		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_file_dir_sort.c">
 			<Option target="uls_clion"/>
 		</Unit>
@@ -288,6 +291,9 @@
 			<Option target="uls_clion"/>
 		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_check_flags.c">
+			<Option target="uls_clion"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_h.c">
 			<Option target="uls_clion"/>
 		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_i.c">
