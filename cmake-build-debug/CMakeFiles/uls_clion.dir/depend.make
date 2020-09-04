@@ -204,6 +204,11 @@ CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o: ../inc/uls_imarche
 CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.o: ../src/additional/mx_file_dir_sort.c
 
+CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.o: ../src/additional/mx_float_to_char.c
+
 CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o: ../inc/uls_imarchenko.h
 CMakeFiles/uls_clion.dir/src/additional/mx_max_len_of_inode.c.o: ../inc/yksuls.h

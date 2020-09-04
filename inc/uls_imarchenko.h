@@ -27,6 +27,7 @@ void mx_alphabet_sort2(char **array, int len);
 int mx_the_biggest_name(char **array, int len);
 int mx_max_len_of_inode(char *obj);
 void mx_file_dir_sort(t_sorted_odj *sort, t_flags *flags);
+void ftoa(float n, char *res, int afterpoint);
 char *mx_convert_bytes(int size);
 
 #endif //ULS_CLION_ULS_IMARCHENKO_H

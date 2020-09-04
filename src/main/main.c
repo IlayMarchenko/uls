@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     lattrib[1]->size = 130361;
     lattrib[2]->size = 102;
     lattrib[3]->size = 102;
-    lattrib[4]->size = 130361;
+    lattrib[4]->size = 1666;
     if (mx_strcmp(argv[1], "-i") == 0)
         mx_flag_i(flags);
     else if (mx_strcmp(argv[1], "-p") == 0)

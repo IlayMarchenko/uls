@@ -1878,6 +1878,33 @@ src/additional/mx_file_dir_sort.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_file_dir_sort.c.s
 .PHONY : src/additional/mx_file_dir_sort.c.s
 
+src/additional/mx_float_to_char.o: src/additional/mx_float_to_char.c.o
+
+.PHONY : src/additional/mx_float_to_char.o
+
+# target to build an object file
+src/additional/mx_float_to_char.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.o
+.PHONY : src/additional/mx_float_to_char.c.o
+
+src/additional/mx_float_to_char.i: src/additional/mx_float_to_char.c.i
+
+.PHONY : src/additional/mx_float_to_char.i
+
+# target to preprocess a source file
+src/additional/mx_float_to_char.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.i
+.PHONY : src/additional/mx_float_to_char.c.i
+
+src/additional/mx_float_to_char.s: src/additional/mx_float_to_char.c.s
+
+.PHONY : src/additional/mx_float_to_char.s
+
+# target to generate assembly for a file
+src/additional/mx_float_to_char.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.s
+.PHONY : src/additional/mx_float_to_char.c.s
+
 src/additional/mx_max_len_of_inode.o: src/additional/mx_max_len_of_inode.c.o
 
 .PHONY : src/additional/mx_max_len_of_inode.o
@@ -2325,6 +2352,9 @@ help:
 	@echo "... src/additional/mx_file_dir_sort.o"
 	@echo "... src/additional/mx_file_dir_sort.i"
 	@echo "... src/additional/mx_file_dir_sort.s"
+	@echo "... src/additional/mx_float_to_char.o"
+	@echo "... src/additional/mx_float_to_char.i"
+	@echo "... src/additional/mx_float_to_char.s"
 	@echo "... src/additional/mx_max_len_of_inode.o"
 	@echo "... src/additional/mx_max_len_of_inode.i"
 	@echo "... src/additional/mx_max_len_of_inode.s"

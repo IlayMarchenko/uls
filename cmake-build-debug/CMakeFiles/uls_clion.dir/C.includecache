@@ -68,7 +68,7 @@ time.h
 sys/ioctl.h
 -
 
-/Users/imarchenko/CLionProjects/uls_clion/src/flags/mx_flag_h.c
+/Users/imarchenko/CLionProjects/uls_clion/src/main/main.c
 ../../inc/uls_imarchenko.h
 /Users/imarchenko/CLionProjects/uls_clion/inc/uls_imarchenko.h
 
