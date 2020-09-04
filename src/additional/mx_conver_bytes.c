@@ -34,6 +34,7 @@ static char *convert(int size, char *type, int n) {
     temp = mx_itoa(size);
     result = mx_strcpy(result, temp);
     result = mx_strcat(result, type);
+    mx_strdel(&temp);
     return result;
 }
 

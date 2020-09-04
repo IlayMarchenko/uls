@@ -40,5 +40,5 @@ int main(int argc, char *argv[]) {
 //    printf("\n\ncolumns %d\n", w.ws_col);
 //    // -------------------------------------
 //    mx_printchar('\n');
-//    system("leaks -q uls_clion");
+    //system("leaks -q uls_clion");
 }
