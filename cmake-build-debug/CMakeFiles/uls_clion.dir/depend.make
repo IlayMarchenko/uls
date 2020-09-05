@@ -219,9 +219,6 @@ CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o: ../inc/uls_imar
 CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/additional/mx_the_biggest_name.c.o: ../src/additional/mx_the_biggest_name.c
 
-CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../libmx/inc/libmx.h
-CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../inc/uls_imarchenko.h
-CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/flags/mx_check_flags.c.o: ../src/flags/mx_check_flags.c
 
 CMakeFiles/uls_clion.dir/src/flags/mx_flag_h.c.o: ../libmx/inc/libmx.h
@@ -248,6 +245,11 @@ CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o: ../libmx/inc/li
 CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o: ../inc/uls_imarchenko.h
 CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o: ../inc/yksuls.h
 CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o: ../src/output/mx_output_in_one_column.c
+
+CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o: ../libmx/inc/libmx.h
+CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o: ../inc/uls_imarchenko.h
+CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o: ../inc/yksuls.h
+CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o: ../src/output/mx_output_with_comma.c
 
 CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o: ../libmx/inc/libmx.h
 CMakeFiles/uls_clion.dir/src/output/output_by_size_of_wind.c.o: ../inc/uls_imarchenko.h

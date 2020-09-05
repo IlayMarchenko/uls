@@ -1032,6 +1032,32 @@ CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/imarchenko/CLionProjects/uls_clion/src/additional/mx_float_to_char.c -o CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.s
 
+CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o: CMakeFiles/uls_clion.dir/flags.make
+CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o: ../src/output/mx_output_with_comma.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o   -c /Users/imarchenko/CLionProjects/uls_clion/src/output/mx_output_with_comma.c
+
+CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/imarchenko/CLionProjects/uls_clion/src/output/mx_output_with_comma.c > CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.i
+
+CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/imarchenko/CLionProjects/uls_clion/src/output/mx_output_with_comma.c -o CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.s
+
+CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.o: CMakeFiles/uls_clion.dir/flags.make
+CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.o: ../src/main/mx_check_and_output.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.o   -c /Users/imarchenko/CLionProjects/uls_clion/src/main/mx_check_and_output.c
+
+CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/imarchenko/CLionProjects/uls_clion/src/main/mx_check_and_output.c > CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.i
+
+CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/imarchenko/CLionProjects/uls_clion/src/main/mx_check_and_output.c -o CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.s
+
 # Object files for target uls_clion
 uls_clion_OBJECTS = \
 "CMakeFiles/uls_clion.dir/libmx/src/mx_binary_search.c.o" \
@@ -1108,7 +1134,9 @@ uls_clion_OBJECTS = \
 "CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o" \
 "CMakeFiles/uls_clion.dir/src/flags/mx_flag_h.c.o" \
 "CMakeFiles/uls_clion.dir/src/additional/mx_conver_bytes.c.o" \
-"CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.o"
+"CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.o" \
+"CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o" \
+"CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.o"
 
 # External object files for target uls_clion
 uls_clion_EXTERNAL_OBJECTS =
@@ -1188,9 +1216,11 @@ uls_clion: CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.o
 uls_clion: CMakeFiles/uls_clion.dir/src/flags/mx_flag_h.c.o
 uls_clion: CMakeFiles/uls_clion.dir/src/additional/mx_conver_bytes.c.o
 uls_clion: CMakeFiles/uls_clion.dir/src/additional/mx_float_to_char.c.o
+uls_clion: CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o
+uls_clion: CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.o
 uls_clion: CMakeFiles/uls_clion.dir/build.make
 uls_clion: CMakeFiles/uls_clion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Linking C executable uls_clion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/imarchenko/CLionProjects/uls_clion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Linking C executable uls_clion"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/uls_clion.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

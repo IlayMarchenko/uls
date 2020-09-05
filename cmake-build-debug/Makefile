@@ -2094,6 +2094,33 @@ src/main/main.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/main/main.c.s
 .PHONY : src/main/main.c.s
 
+src/main/mx_check_and_output.o: src/main/mx_check_and_output.c.o
+
+.PHONY : src/main/mx_check_and_output.o
+
+# target to build an object file
+src/main/mx_check_and_output.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.o
+.PHONY : src/main/mx_check_and_output.c.o
+
+src/main/mx_check_and_output.i: src/main/mx_check_and_output.c.i
+
+.PHONY : src/main/mx_check_and_output.i
+
+# target to preprocess a source file
+src/main/mx_check_and_output.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.i
+.PHONY : src/main/mx_check_and_output.c.i
+
+src/main/mx_check_and_output.s: src/main/mx_check_and_output.c.s
+
+.PHONY : src/main/mx_check_and_output.s
+
+# target to generate assembly for a file
+src/main/mx_check_and_output.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/main/mx_check_and_output.c.s
+.PHONY : src/main/mx_check_and_output.c.s
+
 src/output/mx_output_in_one_column.o: src/output/mx_output_in_one_column.c.o
 
 .PHONY : src/output/mx_output_in_one_column.o
@@ -2120,6 +2147,33 @@ src/output/mx_output_in_one_column.s: src/output/mx_output_in_one_column.c.s
 src/output/mx_output_in_one_column.c.s:
 	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/mx_output_in_one_column.c.s
 .PHONY : src/output/mx_output_in_one_column.c.s
+
+src/output/mx_output_with_comma.o: src/output/mx_output_with_comma.c.o
+
+.PHONY : src/output/mx_output_with_comma.o
+
+# target to build an object file
+src/output/mx_output_with_comma.c.o:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.o
+.PHONY : src/output/mx_output_with_comma.c.o
+
+src/output/mx_output_with_comma.i: src/output/mx_output_with_comma.c.i
+
+.PHONY : src/output/mx_output_with_comma.i
+
+# target to preprocess a source file
+src/output/mx_output_with_comma.c.i:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.i
+.PHONY : src/output/mx_output_with_comma.c.i
+
+src/output/mx_output_with_comma.s: src/output/mx_output_with_comma.c.s
+
+.PHONY : src/output/mx_output_with_comma.s
+
+# target to generate assembly for a file
+src/output/mx_output_with_comma.c.s:
+	$(MAKE) -f CMakeFiles/uls_clion.dir/build.make CMakeFiles/uls_clion.dir/src/output/mx_output_with_comma.c.s
+.PHONY : src/output/mx_output_with_comma.c.s
 
 src/output/output_by_size_of_wind.o: src/output/output_by_size_of_wind.c.o
 
@@ -2376,9 +2430,15 @@ help:
 	@echo "... src/main/main.o"
 	@echo "... src/main/main.i"
 	@echo "... src/main/main.s"
+	@echo "... src/main/mx_check_and_output.o"
+	@echo "... src/main/mx_check_and_output.i"
+	@echo "... src/main/mx_check_and_output.s"
 	@echo "... src/output/mx_output_in_one_column.o"
 	@echo "... src/output/mx_output_in_one_column.i"
 	@echo "... src/output/mx_output_in_one_column.s"
+	@echo "... src/output/mx_output_with_comma.o"
+	@echo "... src/output/mx_output_with_comma.i"
+	@echo "... src/output/mx_output_with_comma.s"
 	@echo "... src/output/output_by_size_of_wind.o"
 	@echo "... src/output/output_by_size_of_wind.i"
 	@echo "... src/output/output_by_size_of_wind.s"

@@ -308,7 +308,13 @@
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/main/main.c">
 			<Option target="uls_clion"/>
 		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/main/mx_check_and_output.c">
+			<Option target="uls_clion"/>
+		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/output/mx_output_in_one_column.c">
+			<Option target="uls_clion"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/output/mx_output_with_comma.c">
 			<Option target="uls_clion"/>
 		</Unit>
 		<Unit filename="/Users/imarchenko/CLionProjects/uls_clion/src/output/output_by_size_of_wind.c">

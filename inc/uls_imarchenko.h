@@ -13,8 +13,13 @@ typedef struct s_sorted_obj {
     int len_of_dirs_array;
 }              t_sorted_odj;
 
+typedef struct s_result {
+    char **result;
+    int length;
+}              t_result;
 
-void mx_flag_i(t_flags *flags);
+
+t_result *mx_flag_i(t_flags *flags, char *object);
 void mx_flag_p(t_flags *flags);
 void mx_flag_h(t_lattrib **lattrib, t_flags *flags);
 
@@ -29,5 +34,6 @@ int mx_max_len_of_inode(char *obj);
 void mx_file_dir_sort(t_sorted_odj *sort, t_flags *flags);
 void ftoa(float n, char *res, int afterpoint);
 char *mx_convert_bytes(int size);
+void mx_output_with_comma(char **array, int len_of_array);
 
 #endif //ULS_CLION_ULS_IMARCHENKO_H

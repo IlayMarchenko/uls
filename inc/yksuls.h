@@ -14,7 +14,7 @@
 
 #define INVALID_USAGE "usage: uls [-l] [file ...]"
 
-#define FLAGS "a l i \0"
+#define FLAGS "a A S r l i p s h 1 m T \0"
 #define FLAG_a
 
 typedef struct s_flags {
