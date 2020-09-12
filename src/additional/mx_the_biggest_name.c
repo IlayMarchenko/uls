@@ -1,4 +1,4 @@
-#include "../../inc/uls_imarchenko.h"
+#include "uls.h"
 
 int mx_the_biggest_name(char **array, int len) {
     int res = 0;

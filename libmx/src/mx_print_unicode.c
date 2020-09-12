@@ -34,6 +34,3 @@ void mx_print_unicode(wchar_t c) {
     }
     write(1, byte, size);
 }
-
-
-

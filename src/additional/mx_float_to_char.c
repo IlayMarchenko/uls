@@ -1,4 +1,4 @@
-#include "../../inc/uls_imarchenko.h"
+#include "uls.h"
 
 static void reverse(char* str, int len);
 static int intToStr(int x, char str[], int d);

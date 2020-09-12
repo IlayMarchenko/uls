@@ -1,48 +1,36 @@
-#include "../../inc/uls_imarchenko.h"
+#include "uls.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char **argv) {
     t_flags *flags = (t_flags*)malloc(sizeof(t_flags));
-    flags->all_flags = (char **)malloc(sizeof(char *) * 3);
-    flags->switch_flags = (int *)malloc(sizeof(int) * 3);
+    t_sorted_odj *sort = (t_sorted_odj *)malloc(sizeof(t_sorted_odj));
+    t_lattrib **lattrib = NULL;
     flags->argc = argc;
     flags->argv = argv;
-    flags->all_obj = (char **)malloc(sizeof(char *) * 5);
-    for (int i = 0; i < 4; ++i) {
-        flags->all_obj[i] = mx_strnew(40);
-    }
-    flags->all_obj[4] = NULL;
-    for (int j = 0; j < 4; ++j) {
-        flags->all_obj[j] = mx_strcpy(flags->all_obj[j], argv[j + 2]);
-    }
-    flags->number_of_obj = 0;
-    t_lattrib **lattrib = (t_lattrib **)malloc(sizeof(t_lattrib *) * 5);
-    for (int k = 0; k < 5; ++k) {
-        lattrib[k] = malloc(sizeof(t_lattrib));
-    }
-    lattrib[0]->size = 102;
-    lattrib[1]->size = 130361;
-    lattrib[2]->size = 102;
-    lattrib[3]->size = 102;
-    lattrib[4]->size = 1666;
-    t_result *struct_result = NULL;
-    if (mx_strcmp(argv[1], "-i") == 0)
-        struct_result = mx_flag_i(flags, NULL);
-    else if (mx_strcmp(argv[1], "-p") == 0)
-        mx_flag_p(flags);
-    else if (mx_strcmp(argv[1], "-lh") == 0)
-        mx_flag_h(lattrib, flags);
-    else
-        mx_printstr("sorry, such flag doesn't work yet...\n");
+    DIR *d;
+    struct dirent *dir;
+    flags->num_dir_file = 0;
 
-    if (struct_result)
-        mx_output_by_size_of_wind(struct_result->result, struct_result->length);
+    d = opendir(".");
+        while ((dir = readdir(d)) != NULL)
+            if (dir->d_name[0] != '.')
+                flags->num_dir_file++;
+    closedir(d);
+// if just ./uls
+    if (flags->argc == 1 || ((mx_strcmp(flags->argv[1], "-h") == 0) &&
+        !flags->argv[2]) || ((mx_strcmp(flags->argv[1], "--") == 0) &&
+        !flags->argv[2])) {
+        mx_print_root_files(flags);
+        exit(0);
+    }
+// check illegal flags
+    mx_error_illegal_option(flags);
 
+// if ./uls + flags(-i -l -la ...)
+    mx_check_flags(flags, sort);
+    mx_check_and_rewrite_obj(flags);
+    mx_check_and_connect_flags(flags, sort);
 
-//    // -------------------------------------
-//    struct winsize w;
-//    ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
-//    printf("\n\ncolumns %d\n", w.ws_col);
-//    // -------------------------------------
-//    mx_printchar('\n');
-    //system("leaks -q uls_clion");
+    if (flags->argc > 1 && flags->count_flags == 0)
+        mx_print_two_and_more_obj(flags);
+     //system("leaks -q uls");
 }

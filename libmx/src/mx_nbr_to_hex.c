@@ -1,55 +1,25 @@
 #include "libmx.h"
 
-static void swap_char(char *s1, char *s2){
-	char x = *(s1);
-	*(s1) = *(s2);
-	*(s2) = x;
+char *mx_nbr_to_hex(unsigned long nbr) {
+        int rem;
+        int i = 0, j = 0;
+        unsigned long n_nbr = nbr;
+
+        while (n_nbr > 0) {
+                n_nbr /= 10;
+                i++;
+        }
+        char *hex = mx_strnew(i);
+        while (nbr != 0) {
+                rem = nbr % 16;
+                if (rem < 10)
+                        hex[j++] = 48 + rem;
+                if (rem > 10)
+                        hex[j++] = 87 + rem;
+                nbr /= 16;
+        }
+	j--;
+
+        mx_str_reverse(hex);
+        return hex;
 }
-
-static int strlenn(const char *s) {
-	int i;
-	for(i = 0; s[i] != '\0'; i++);
-	return i;
-}
-
-static void str_reverse(char *s){
-	int lenght = strlenn(s);
-	int mid = lenght / 2;
-	for(int s1 = 0;s1 <= mid;s1++){	
-		if(lenght <= s1)
-		break;
-		lenght -= 1;
-		swap_char(&s[s1], &s[lenght]);
-	}
-}
-
-char *mx_nbr_to_hex(unsigned long nbr){
-
-	unsigned long nbr_test = nbr;
-	int length = 1;
-	int temp;
-	int i = 0;
-
-	while(nbr_test / 10 > 1){
-		nbr_test /= 10;
-		length++;
-	}
-
-	char *string = mx_strnew(length);
-
-	while(nbr != 0){
-		temp = nbr % 16;
-		if(temp < 10){
-			string[i] = 48 + temp;
-		}
-		else{
-			string[i] = 87 + temp;
-		}
-		nbr /= 16;
-		i++;
-	}
-
-	str_reverse(string);
-	return string;
-}
-

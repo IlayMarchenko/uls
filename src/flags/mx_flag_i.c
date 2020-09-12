@@ -1,84 +1,89 @@
-#include "../../inc/uls_imarchenko.h"
+#include "uls.h"
 
-static t_result *one_obj(char *obj);
+static t_result *one_obj(char *obj, t_flags *flags);
 static char *trim(char *string, char **current_file);
 static void add_inode_to_name_of_file(t_sorted_odj *sort);
 static void two_and_more_obj(t_flags *flags);
+static void add_to_array(int max_len_of_inode, struct dirent *directory, char **array, int i);
 
-t_result *mx_flag_i(t_flags *flags, char *object) {
+void mx_flag_i(t_flags *flags) {
     t_result *struct_result = NULL;
-    if (flags->number_of_obj == 0 && !object) {
-        struct_result = one_obj(".");
+    if (flags->number_of_obj == 0) {
+        struct_result = one_obj(".", flags);
+        if (flags->switch_flags[5] != 1)
+            mx_output_by_size_of_wind(struct_result->result, struct_result->length);
+        else
+            mx_output_in_one_column(struct_result->result, struct_result->length);
+        mx_strdel(&struct_result->result[struct_result->length - 1]);
+        mx_del_strarr(&struct_result->result);
+        free(struct_result);
     }
-    else if (flags->number_of_obj == 1 && !object) {
+    else if (flags->number_of_obj >= 1) {
         two_and_more_obj(flags);
     }
-    else if (flags->number_of_obj == 1 || object) {
-        struct_result = one_obj(object);
-    }
-    else if (flags->number_of_obj > 1 && !object) {
-        two_and_more_obj(flags);
-    }
-    return struct_result;
 }
 
-static t_result *one_obj(char *obj) {
+static t_result *one_obj(char *obj, t_flags *flags) {
     t_result *struct_result = (t_result *)malloc(sizeof(t_result));
     int len_of_array = 0;
     int max_len_of_inode;
-    int temp;
     int i = 0;
-    char *inode;
     char **array = NULL;
     DIR *d;
     struct dirent *directory;
     d = opendir(obj);
     if (d) {
         while ((directory = readdir(d)) != NULL) {
-            if (directory->d_name[0] != '.') {
-                len_of_array++;
+            if (flags->switch_flags[0] == 1 || flags->switch_flags[6] == 1){
+                if (flags->switch_flags[0] == 1) { // 'a' case
+                    len_of_array++;
+                }
+                else if (flags->switch_flags[6] == 1 && (mx_strcmp(".", directory->d_name) != 0 && mx_strcmp("..", directory->d_name) != 0)) {
+                    len_of_array++;
+                }
+            }
+            else {
+                if (directory->d_name[0] != '.') {
+                    len_of_array++;
+                }
             }
         }
         closedir(d);
-        max_len_of_inode = mx_max_len_of_inode(obj);
+        max_len_of_inode = mx_max_len_of_inode(obj, flags);
         d = opendir(obj);
         array = (char **)malloc(sizeof(char *) * len_of_array);
         while ((directory = readdir(d)) != NULL) {
-            if (directory->d_name[0] != '.') {
-                temp = max_len_of_inode - mx_intlen(directory->d_ino);
-                array[i] = mx_strnew(directory->d_namlen + max_len_of_inode + 1);
-                if (temp != 0) {
-                    for (int j = 0; j < temp; ++j) {
-                        if (j == 0) {
-                            array[i] = mx_strcpy(array[i], " ");
-                        }
-                        else {
-                            array[i] = mx_strcat(array[i], " ");
-                        }
-                    }
-                    inode = mx_itoa(directory->d_ino);
-                    array[i] = mx_strcat(array[i], inode);
+            if (flags->switch_flags[0] == 1 || flags->switch_flags[6] == 1) {
+                if (flags->switch_flags[0] == 1) { // '-a' case
+                    add_to_array(max_len_of_inode, directory, array, i);
+                    i++;
                 }
-                else {
-                    inode = mx_itoa(directory->d_ino);
-                    array[i] = mx_strcpy(array[i], inode);
+                else if (flags->switch_flags[6] == 1 && (mx_strcmp(".", directory->d_name) != 0 && mx_strcmp("..", directory->d_name) != 0)) { // case '-A'
+                    add_to_array(max_len_of_inode, directory, array, i);
+                    i++;
                 }
-                array[i] = mx_strcat(array[i], " ");
-                array[i] = mx_strcat(array[i], directory->d_name);
-                i++;
-                mx_strdel(&inode);
+            }
+            else {
+                if (directory->d_name[0] != '.') { // case without '-a' and '-A'
+                    add_to_array(max_len_of_inode, directory, array, i);
+                    i++;
+                }
             }
         }
         closedir(d);
-        //mx_alphabet_sort2(array, len_of_array);
-        //mx_output_by_size_of_wind(array, len_of_array);
+        mx_alphabet_sort2(array, len_of_array);
+        if (flags->switch_flags[7] == 1)
+            mx_array_reverse(array, len_of_array);
         struct_result->result = (char **)malloc(sizeof(char *) * len_of_array);
         for (int k = 0; k < len_of_array; ++k) {
             struct_result->result[k] = mx_strdup(array[k]);
         }
         struct_result->length = len_of_array;
-        mx_strdel(&array[len_of_array - 1]);
-        mx_del_strarr(&array);
+        if (len_of_array != 0) {
+            mx_strdel(&array[len_of_array - 1]);
+            mx_del_strarr(&array);
+        } else
+            free(array);
     }
     return struct_result;
 }
@@ -121,16 +126,22 @@ static void two_and_more_obj(t_flags *flags) {
     t_sorted_odj *sort = (t_sorted_odj *)malloc(sizeof(t_sorted_odj));
     sort->len_of_dirs_array = sort->len_of_files_array = 0;
     mx_file_dir_sort(sort, flags);
-    char **array = NULL;
     if (sort->len_of_files_array != 0) {
         mx_alphabet_sort(sort->files, sort->len_of_files_array);
+        if (flags->switch_flags[7] == 1)
+            mx_array_reverse(sort->files, sort->len_of_files_array);
         add_inode_to_name_of_file(sort);
     }
     if (sort->len_of_dirs_array != 0) {
         mx_alphabet_sort(sort->dirs, sort->len_of_dirs_array);
+        if (flags->switch_flags[7] == 1)
+            mx_array_reverse(sort->dirs, sort->len_of_dirs_array);
     }
     if (sort->len_of_files_array != 0) {
-        mx_output_by_size_of_wind(sort->files, sort->len_of_files_array);
+        if (flags->switch_flags[5] != 1)
+            mx_output_by_size_of_wind(sort->files, sort->len_of_files_array);
+        else
+            mx_output_in_one_column(sort->files, sort->len_of_files_array);
     }
     for (int j = 0; j < sort->len_of_dirs_array; ++j) {
         if (flags->number_of_obj != 1) {
@@ -139,11 +150,19 @@ static void two_and_more_obj(t_flags *flags) {
             mx_printstr(sort->dirs[j]);
             mx_printstr(":\n");
         }
-        struct_result = one_obj(sort->dirs[j]);
-        mx_output_by_size_of_wind(struct_result->result, struct_result->length);
-        for (int i = 0; i < struct_result->length; ++i) {
-            mx_strdel(&struct_result->result[i]);
-        }
+        struct_result = one_obj(sort->dirs[j], flags);
+        // --output--
+        if (flags->switch_flags[5] != 1)
+            mx_output_by_size_of_wind(struct_result->result, struct_result->length);
+        else
+            mx_output_in_one_column(struct_result->result, struct_result->length);
+        // --
+        if (struct_result->length != 0) {
+            mx_strdel(&struct_result->result[struct_result->length - 1]);
+            mx_del_strarr(&struct_result->result);
+        } else
+            free(struct_result->result);
+
         free(struct_result);
     }
     mx_del_strarr(&sort->files);
@@ -180,4 +199,31 @@ static void add_inode_to_name_of_file(t_sorted_odj *sort) {
         mx_strdel(&array[j]);
     }
     mx_del_strarr(&array);
+}
+
+static void add_to_array(int max_len_of_inode, struct dirent *directory, char **array, int i) {
+    int temp;
+    char *inode;
+
+    temp = max_len_of_inode - mx_intlen(directory->d_ino);
+    array[i] = mx_strnew(directory->d_namlen + max_len_of_inode + 1);
+    if (temp != 0) {
+        for (int j = 0; j < temp; ++j) {
+            if (j == 0) {
+                array[i] = mx_strcpy(array[i], " ");
+            }
+            else {
+                array[i] = mx_strcat(array[i], " ");
+            }
+        }
+        inode = mx_itoa(directory->d_ino);
+        array[i] = mx_strcat(array[i], inode);
+    }
+    else {
+        inode = mx_itoa(directory->d_ino);
+        array[i] = mx_strcpy(array[i], inode);
+    }
+    array[i] = mx_strcat(array[i], " ");
+    array[i] = mx_strcat(array[i], directory->d_name);
+    mx_strdel(&inode);
 }

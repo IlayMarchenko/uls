@@ -1,94 +1,87 @@
-# имя библиотеки
 NAME = libmx.a
 
-# папка с исходниками
 SRC_DIR = src
 
-# папка, куда будут складываться объектные файлы
 OBJ_DIR = obj
 
-# папка с хедерами
 INC_DIR = inc
 
-# сделать список всех файлов в папке src, которые имеют расширение .с
-# формат каждой записи src/<file_name>.c
+# makes list of all files in dir src with .c expansion
+# each record has the following format: src/<filename>.c
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 
-# добавить префикс obj/ к каждой записи из SRC_FILES, в который убрали
-# путь (до notdir src/<file_name>.c, после <file_name>.c) и изменить
-# расширение с .с на .о
-# результат выполнения src/<file_name>.o  --> obj/<file_name>.o
-# о всех манипуляциях с именами можно почитать тут
-# https://www.gnu.org/software/make/manual/html_node/File-Name-Functions.html
+# added prefix obj/ to all the records from SRC_FILES
+# changed expansion from .c to .o
+# result from src/<filename>.c to obj/<filename>.o
 OBJ_FILES = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC_FILES:%.c=%.o)))
 
-# сделать список всех файлов в папке inc, которые имеют расширение .h
-# формат каждой записи inc/<file_name>.h
+# makes list of all files in dir src with .h expansion
+# each record has the following format: inc/<filename>.h
 INC_FILES = $(wildcard $(INC_DIR)/*.h)
 
-# компилятор для создания o-файлов
 CC = clang
 
-# флаги для компилятора (добабить префикс -W ко всем записям после
-# запятой)
-CFLAGS = -std=c11 $(addprefix -W, all extra error pedantic) -g
+# add prefix -W to all the records
+# -g - generates complete debug info
+C_FLAGS = -std=c11 $(addprefix -W, all error extra pedantic) -g
 
-# архиватор для формирования библиотеки из о-файлов
+# archive to make libtary
 AR = ar
 
-#флаги для архиватора
-AFLAGS = rcs
+# flags for archive
+AR_FLAGS = rcs
 
 MKDIR = mkdir -p
 RM = rm -rf
 
-# главная цель, при ее вызове вызывается цель libmx.a
 all: $(NAME)
 
-# цель зависит от времени создания o-файлов, т.е если находится какой-то
-# о-файл время последней модификации которого позже, чем время последней
-# модификации файла libmx.a, то будут запущены инструкции в этой цели
-# $@ - переменная, которая означает имя цели
-# $^ - переменная, которая означает все зависимости текущей цели
-# просто для красивой оригинальной записи ;)
-$(NAME): $(OBJ_FILES)
-	@$(AR) $(AFLAGS) $@ $^
-	@printf "\r\33[2K$@\t \033[32;1mcreated\033[0m\n"
+print:
+	@printf "$(OBJ_FILES)"
+	@printf "\n\n"
+	@printf "$(SRC_FILES)"
 
-# перед компиляцией o-файлов создаем папку obj, про пайпы в мейкафайле
-# https://www.gnu.org/software/make/manual/html_node/Prerequisite-Types.html
+# aim depends on o-files creation time
+# $@ - the file name of the target of the rule.
+# if the target is an archive member, then $@ is the name of the archive file
+# $^ - names of all the prerequisites, with spaces between them.
+# a target has only one prerequisite on each other file it depends on,
+# the value of $^ contains just one copy of the name
+$(NAME): $(OBJ_FILES)
+	@$(AR) $(AR_FLAGS) $@ $^
+	@printf "\r\33[2K$@\t\033[32;1mcreated\033[0m\n"
+
+# create a directory obj before o-files compilation (order-only prerequisite)
 $(OBJ_FILES): | $(OBJ_DIR)
 
-# сравниваем время последней модификации по одному каждого о-файла
-# с с-файлом c точно таким же именем и h-файлами. Если дата последней
-# модицикации o-файла раньше, то будет перекомпилирован только этот
-# с-файл и библиотека будет пересобрана. в случае с h-файлом будут
-# перекомпилированы все c-файлы, т.к. это изменение касается каждого
-# файла
-# $< - переменная, которая означает имя первой зависимости цели
+# compare final modification time  of each o-file
+# with c-file and h-file to recompile only renewed ones
+# in case of h-file all the files will be recompiled
+# $< variable - The name of the first prerequisite
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC_FILES)
-	@$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_DIR)
-	@printf "\r\33[2K$(NAME)\033[33;1m\t compile \033[0m$(<:$(SRC_DIR)/%.c=%)\r"
+	@$(CC) $(C_FLAGS) -c $< -o $@ -I $(INC_DIR)
+	@printf "\r\33[2K$(NAME)\033[33;1m\t compile \033[0m$(<:$(SRC_DIR)/%.c = %)\r"
 
-# создается папка obj
+# create obj directory
 $(OBJ_DIR):
 	@$(MKDIR) $@
 
-# удаляем папку с о-файлами
+#remove directory with o-files
 clean:
 	@$(RM) $(OBJ_DIR)
 	@printf "$(OBJ_DIR) in $(NAME)\t \033[31;1mdeleted\033[0m\n"
 
-# полностью удаляем результат работы мейкфайла
+# remove the result of makefile work
 uninstall:
 	@$(RM) $(OBJ_DIR)
 	@$(RM) $(NAME)
-	@@printf "$(NAME)\t \033[31;1muninstalled\033[0m\n"
+	@printf "$(NAME)\t \033[31;1muninstalled\033[0m\n"
 
-# удаляем и заново собираем библиотеку
+# delete and remake library
 reinstall: uninstall all
 
-# .PHONY - это явное указание имен целей мейкфайла, например, если
-# в папке будет файл clean и попытаться выполнить команду make clean,
-# то make попытается выполнить файл clean, а не цель clean
+# .PHONY is a clear point to the names of targets
+# There are two reasons to use a phony target:
+# to avoid a conflict with a file of the same name,
+# and to improve performance
 .PHONY: all uninstall clean reinstall

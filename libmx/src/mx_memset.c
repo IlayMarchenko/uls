@@ -1,14 +1,11 @@
 #include "libmx.h"
 
 void *mx_memset(void *b, int c, size_t len) {
+    unsigned char *value = (unsigned char *)b;
 
-	char *a = b;
-
-    while(len--) {
-        *a++ = c;
+    while (len > 0) {
+        *value++ = c;
+        len--;
     }
-
-    return a;
+    return b;
 }
-
-

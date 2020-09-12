@@ -1,37 +1,31 @@
 #include "libmx.h"
 
-char * mx_itoa(int number) {
+char *mx_itoa(int number) {
+    int length = 0;
+    char *result = NULL;
 
-    int len = 0;
-    int num = number;
-    char *str = 0;
-    int isNeg = 0;
-
-    if (number == 0) {
-        str = (char*) malloc (sizeof(char) * 2);
-        str = "0\0";
-        return str;
-    }
-    for (;num != 0; len++, num/=10);
     if (number == -2147483648) {
-        str = (char*) malloc (sizeof(char) * 12);
-        str = "-2147483648\0";
-        return str;
+        result = (char *) malloc(sizeof(char) * 12);
+        mx_strcpy(result, "-2147483648");
+        return result;
     }
+    //assigning 0 value and the end of string
+    if (number == 0) {
+        result = (char *) malloc(sizeof(char) * 2);
+        mx_strcpy(result, "0");
+        return result;
+    }
+    length = mx_nbr_length(number);
+    result = (char *) malloc(sizeof(char) * length + 2);
     if (number < 0) {
-        number = -number;
-        isNeg = 1;
-        str = (char*) malloc (sizeof(char) * len +2);
-        str[0] = '-';
+        result[0] = '-';
+        number *= -1;
+        length++;
     }
-    else
-        str = (char *) malloc(sizeof(char) * len + 1);
-
-    for (int i = len + isNeg - 1; i >= isNeg; i--) {
-        str[i] = number % 10 + 48;
+    result[length] = '\0';
+    while (number) {
+        result[--length] = (char)((number % 10) + 48);
         number /= 10;
     }
-    str[len + isNeg] = 0;
-    return str;
+    return result;
 }
-

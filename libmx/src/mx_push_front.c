@@ -1,14 +1,10 @@
 #include "libmx.h"
 
-void mx_push_front(t_list **list, void *data){
+void mx_push_front(t_list **list, void *data) {
 
-	t_list * new_first_node = (t_list*)malloc(sizeof(t_list));
+t_list *one_new_node = (t_list*)malloc(sizeof(t_list));
 
-	new_first_node->data = data;
-
-	new_first_node->next = (*list);
-
-	(*list) = new_first_node;
-
+	one_new_node->data = data;
+	one_new_node->next = (*list);
+	(*list) = one_new_node;
 }
-

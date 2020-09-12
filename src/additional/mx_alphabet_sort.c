@@ -1,4 +1,4 @@
-#include "../../inc/uls_imarchenko.h"
+#include "uls.h"
 
 void mx_alphabet_sort(char **array, int len) {
     char *temp_str = NULL;
