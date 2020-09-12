@@ -1,0 +1,3 @@
+/Users/imarchenko/Desktop/yksonzenko_uls-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/imarchenko/Desktop/yksonzenko_uls-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/imarchenko/Desktop/yksonzenko_uls-master/cmake-build-debug/CMakeFiles/yksonzenko_uls_master.dir

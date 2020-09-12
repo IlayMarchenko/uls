@@ -29,6 +29,7 @@ void mx_print_l_flag(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort) {
         free(lattrib[i]->size_str);
         free(lattrib[i]->time);
         free(lattrib[i]->name);
+        free(lattrib[i]);
     }
     free(lattrib);
 }

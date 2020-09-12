@@ -32,5 +32,6 @@ int main(int argc, char **argv) {
 
     if (flags->argc > 1 && flags->count_flags == 0)
         mx_print_two_and_more_obj(flags);
-     //system("leaks -q uls");
+    mx_printstr("\n\n\n\n");
+     system("leaks -q yksonzenko_uls_master");
 }
