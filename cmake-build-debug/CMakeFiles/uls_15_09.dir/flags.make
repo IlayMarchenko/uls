@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk 
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/imarchenko/Desktop/yksonzenko_uls-master/inc -I/Users/imarchenko/Desktop/yksonzenko_uls-master/libmx/inc 
+C_INCLUDES = -I/Users/imarchenko/Desktop/uls_15_09/inc -I/Users/imarchenko/Desktop/uls_15_09/libmx/inc 
 

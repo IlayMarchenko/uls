@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="uls_15_09"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uls_15_09">
+				<Option output="/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/uls_15_09" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/imarchenko/Desktop/uls_15_09/inc"/>
+					<Add directory="/Users/imarchenko/Desktop/uls_15_09/libmx/inc"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 uls_15_09"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uls_15_09/fast">
+				<Option output="/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/uls_15_09" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/imarchenko/Desktop/uls_15_09/inc"/>
+					<Add directory="/Users/imarchenko/Desktop/uls_15_09/libmx/inc"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 uls_15_09/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/2.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/inc/uls.h">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/inc/libmx.h">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_atoi.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_binary_search.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_bubble_sort.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_count_substr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_count_words.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_create_node.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_del_extra_spaces.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_del_intarr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_del_strarr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_file_to_str.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_foreach.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_get_char_index.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_get_substr_index.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_hex_to_nbr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_in_alphabet.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_intlen.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_isalpha.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_isdigit.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_isspace.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_itoa.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_list_size.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_memccpy.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_memchr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_memcmp.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_memcpy.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_memmem.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_memmove.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_memrchr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_memset.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_nbr_length.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_nbr_to_hex.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_pop_back.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_pop_front.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_pow.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_print_intarr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_print_strarr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_print_unicode.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_printchar.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_printerr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_printint.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_printstr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_push_back.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_push_front.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_quicksort.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_realloc.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_replace_substr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_sort_list.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_sqrt.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_str_reverse.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strcat.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strchr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strcmp.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strcpy.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strdel.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strdup.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strjoin.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strlen.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strncmp.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strncpy.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strndup.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strnew.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strsplit.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strstr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_strtrim.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/libmx/src/mx_swap_char.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_alphabet_sort.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_alphabet_sort2.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_alphabet_sort3.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_array_reverse.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_conver_bytes.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_file_dir_sort.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_float_to_char.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_get_dir_len.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_group_align_left.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_index_align_right.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_links_align_right.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_max_len_of_inode.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_max_len_of_size.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_size_align_right.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_struct_sort.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_the_biggest_name.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/additional/mx_username_align_left.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/errors/mx_check_and_rewrite_obj.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/errors/mx_error_illegal_option.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/errors/mx_no_file_dir.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/errors/mx_print_permission_error.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_check_and_connect_flags.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_check_flags.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_flag_h.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_flag_i.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_flag_l.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_flag_p.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_get_acl_xattr.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_print_permissions_list.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_specify_type_file.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_store_all_obj_array.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/flags/mx_time_modif.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/main/main.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/main/mx_clean_struct_result.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/main/mx_cleaner.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_check_what_to_print.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_output_by_size_of_wind.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_output_in_one_column.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_print_l_flag.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_print_lh_flag.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_print_lhi_flag.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_print_li_flag.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_print_one_obj.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_print_root_dirs_files.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_print_root_files.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/src/print_out/mx_print_two_and_more_obj.c">
+			<Option target="uls_15_09"/>
+		</Unit>
+		<Unit filename="/Users/imarchenko/Desktop/uls_15_09/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

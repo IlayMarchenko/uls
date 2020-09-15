@@ -29,6 +29,8 @@ pwd.h
 -
 time.h
 -
+errno.h
+-
 
 ../libmx/inc/libmx.h
 stdio.h
@@ -46,7 +48,7 @@ stdbool.h
 stddef.h
 -
 
-/Users/imarchenko/Desktop/yksonzenko_uls-master/src/print_out/mx_print_l_flag.c
+/Users/imarchenko/Desktop/uls_15_09/src/main/main.c
 uls.h
-/Users/imarchenko/Desktop/yksonzenko_uls-master/src/print_out/uls.h
+/Users/imarchenko/Desktop/uls_15_09/src/main/uls.h
 

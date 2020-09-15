@@ -12,8 +12,9 @@
 #include <unistd.h>
 #include <pwd.h>
 #include <time.h>
+#include <errno.h>
 
-#define INVALID_USAGE   "usage: uls [-alihp1Ar] [file ...]"
+#define INVALID_USAGE   "usage: uls [-alihpAr] [file ...]"
 #define ILLEGAL_OPT     "uls: illegal option -- "
 
 #define FLAGS   "a l i h p 1 A r s \0"
@@ -45,6 +46,7 @@ typedef struct s_flags {
     int count_obj; // number of objects from argv
     int num_dir_file; // number of files and dirs from root
     int number_of_obj;
+    int error_checher;
 }       t_flags;
 
 typedef struct s_lattrib {
@@ -54,9 +56,12 @@ typedef struct s_lattrib {
     char ftype;
     char *rights;
     int links;
+    char *link_str;
     char *lk_str;
     char *user;
+    char *user_str;
     char *group;
+    char *group_str;
     int size;
     char *time;
     char *name; //d_name
@@ -67,13 +72,14 @@ typedef struct s_lattrib {
 typedef struct s_result {
     char **result;
     int length;
+    bool permission;
 }              t_result;
 
 /*
  * yksonzenko function
  */
 void mx_check_flags(t_flags *flags, t_sorted_odj *sort);
-void mx_cleaner(t_flags *flags, t_lattrib **lattrib);
+void mx_cleaner(t_sorted_odj *sort, t_lattrib **lattrib);
 void mx_clean_struct_result(t_result *result_of_work_i);
 
 //additional
@@ -82,6 +88,8 @@ int mx_max_len_of_size(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort);
 void mx_size_align_right(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort);
 void mx_index_align_right(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort);
 void mx_links_align_right(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort);
+void mx_username_align_left(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort);
+void mx_group_align_left(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort);
 void mx_array_reverse(char **arr, int len);
 void mx_alphabet_sort3(char **array, int len);
 int mx_max_len_of_inode(char *obj, t_flags *flags);
@@ -91,6 +99,7 @@ int mx_get_dir_len(char *obj, t_flags *flags);
 void mx_check_and_rewrite_obj(t_flags *flags);
 void mx_error_illegal_option(t_flags *flags);
 void mx_no_file_dir(char *fd);
+void mx_print_permission_error(char *fd);
 
 // flags
 void mx_flag_l(t_flags *flags, t_sorted_odj *sort);
@@ -100,7 +109,7 @@ void mx_print_permissions_list(t_lattrib **lattrib, struct stat sb, int i);
 void mx_time_modif(struct stat sb, t_lattrib **lattrib, int i);
 void mx_check_and_connect_flags(t_flags *flags, t_sorted_odj *sort);
 char **mx_store_all_obj_array(t_flags *flags);
-void mx_get_acl_xattr(t_lattrib **lattrib, int i);
+void mx_get_acl_xattr(char *name, t_lattrib **lattrib, int i);
 
 // print output
 void mx_print_root_files(t_flags *flags);
@@ -118,7 +127,7 @@ void mx_check_what_to_print(t_flags *flags, t_lattrib **lattrib, t_sorted_odj *s
  * imarchenko function
  */
 void mx_flag_p(t_flags *flags);
-void mx_flag_h(t_lattrib **lattrib, t_flags *flags);
+void mx_flag_h(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort);
 
 void mx_output_in_one_column(char **array, int len_of_array);
 void mx_output_by_size_of_wind(char **array, int len_of_array);

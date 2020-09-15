@@ -44,16 +44,16 @@ RM = "/Users/imarchenko/Library/Application Support/JetBrains/Toolbox/apps/CLion
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/imarchenko/Desktop/yksonzenko_uls-master
+CMAKE_SOURCE_DIR = /Users/imarchenko/Desktop/uls_15_09
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/imarchenko/Desktop/yksonzenko_uls-master/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/imarchenko/Desktop/uls_15_09/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/yksonzenko_uls_master.dir/all
+all: CMakeFiles/uls_15_09.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/yksonzenko_uls_master.dir/clean
+clean: CMakeFiles/uls_15_09.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/yksonzenko_uls_master.dir
+# Target rules for target CMakeFiles/uls_15_09.dir
 
 # All Build rule for target.
-CMakeFiles/yksonzenko_uls_master.dir/all:
-	$(MAKE) -f CMakeFiles/yksonzenko_uls_master.dir/build.make CMakeFiles/yksonzenko_uls_master.dir/depend
-	$(MAKE) -f CMakeFiles/yksonzenko_uls_master.dir/build.make CMakeFiles/yksonzenko_uls_master.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/imarchenko/Desktop/yksonzenko_uls-master/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target yksonzenko_uls_master"
-.PHONY : CMakeFiles/yksonzenko_uls_master.dir/all
+CMakeFiles/uls_15_09.dir/all:
+	$(MAKE) -f CMakeFiles/uls_15_09.dir/build.make CMakeFiles/uls_15_09.dir/depend
+	$(MAKE) -f CMakeFiles/uls_15_09.dir/build.make CMakeFiles/uls_15_09.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target uls_15_09"
+.PHONY : CMakeFiles/uls_15_09.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/yksonzenko_uls_master.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/imarchenko/Desktop/yksonzenko_uls-master/cmake-build-debug/CMakeFiles 100
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/yksonzenko_uls_master.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/imarchenko/Desktop/yksonzenko_uls-master/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/yksonzenko_uls_master.dir/rule
+CMakeFiles/uls_15_09.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/CMakeFiles 100
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/uls_15_09.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/uls_15_09.dir/rule
 
 # Convenience name for target.
-yksonzenko_uls_master: CMakeFiles/yksonzenko_uls_master.dir/rule
+uls_15_09: CMakeFiles/uls_15_09.dir/rule
 
-.PHONY : yksonzenko_uls_master
+.PHONY : uls_15_09
 
 # clean rule for target.
-CMakeFiles/yksonzenko_uls_master.dir/clean:
-	$(MAKE) -f CMakeFiles/yksonzenko_uls_master.dir/build.make CMakeFiles/yksonzenko_uls_master.dir/clean
-.PHONY : CMakeFiles/yksonzenko_uls_master.dir/clean
+CMakeFiles/uls_15_09.dir/clean:
+	$(MAKE) -f CMakeFiles/uls_15_09.dir/build.make CMakeFiles/uls_15_09.dir/clean
+.PHONY : CMakeFiles/uls_15_09.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

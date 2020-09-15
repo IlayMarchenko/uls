@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
-project(yksonzenko_uls_master C)
+project(uls_15_09 C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(inc)
 include_directories(libmx/inc)
 
-add_executable(yksonzenko_uls_master
+add_executable(uls_15_09
         inc/uls.h
         libmx/inc/libmx.h
         libmx/src/mx_atoi.c
@@ -82,6 +82,7 @@ add_executable(yksonzenko_uls_master
         src/additional/mx_file_dir_sort.c
         src/additional/mx_float_to_char.c
         src/additional/mx_get_dir_len.c
+        src/additional/mx_group_align_left.c
         src/additional/mx_index_align_right.c
         src/additional/mx_links_align_right.c
         src/additional/mx_max_len_of_inode.c
@@ -89,9 +90,11 @@ add_executable(yksonzenko_uls_master
         src/additional/mx_size_align_right.c
         src/additional/mx_struct_sort.c
         src/additional/mx_the_biggest_name.c
+        src/additional/mx_username_align_left.c
         src/errors/mx_check_and_rewrite_obj.c
         src/errors/mx_error_illegal_option.c
         src/errors/mx_no_file_dir.c
+        src/errors/mx_print_permission_error.c
         src/flags/mx_check_and_connect_flags.c
         src/flags/mx_check_flags.c
         src/flags/mx_flag_h.c

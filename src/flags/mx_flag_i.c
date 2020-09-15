@@ -33,6 +33,7 @@ static t_result *one_obj(char *obj, t_flags *flags) {
     struct dirent *directory;
     d = opendir(obj);
     if (d) {
+        struct_result->permission = true;
         while ((directory = readdir(d)) != NULL) {
             if (flags->switch_flags[0] == 1 || flags->switch_flags[6] == 1){
                 if (flags->switch_flags[0] == 1) { // 'a' case
@@ -58,7 +59,9 @@ static t_result *one_obj(char *obj, t_flags *flags) {
                     add_to_array(max_len_of_inode, directory, array, i);
                     i++;
                 }
-                else if (flags->switch_flags[6] == 1 && (mx_strcmp(".", directory->d_name) != 0 && mx_strcmp("..", directory->d_name) != 0)) { // case '-A'
+                else if (flags->switch_flags[6] == 1 &&
+                        (mx_strcmp(".", directory->d_name) != 0 &&
+                        mx_strcmp("..", directory->d_name) != 0)) { // case '-A'
                     add_to_array(max_len_of_inode, directory, array, i);
                     i++;
                 }
@@ -84,6 +87,9 @@ static t_result *one_obj(char *obj, t_flags *flags) {
             mx_del_strarr(&array);
         } else
             free(array);
+    }
+    else if (errno == 13) {
+        struct_result->permission = false;
     }
     return struct_result;
 }
@@ -152,21 +158,35 @@ static void two_and_more_obj(t_flags *flags) {
         }
         struct_result = one_obj(sort->dirs[j], flags);
         // --output--
-        if (flags->switch_flags[5] != 1)
-            mx_output_by_size_of_wind(struct_result->result, struct_result->length);
-        else
-            mx_output_in_one_column(struct_result->result, struct_result->length);
+        if (struct_result->permission) { // if we have permission for dir
+            if (flags->switch_flags[5] != 1)
+                mx_output_by_size_of_wind(struct_result->result, struct_result->length);
+            else
+                mx_output_in_one_column(struct_result->result, struct_result->length);
+        }
+        else { // if we dont have permission
+            char *current_file;
+            char *temp = trim(sort->dirs[j], &current_file);
+            mx_print_permission_error(current_file);
+            mx_strdel(&current_file);
+            mx_strdel(&temp);
+        }
         // --
         if (struct_result->length != 0) {
-            mx_strdel(&struct_result->result[struct_result->length - 1]);
+            if (struct_result->result[struct_result->length - 1])
+                mx_strdel(&struct_result->result[struct_result->length - 1]);
             mx_del_strarr(&struct_result->result);
-        } else
+            struct_result->length = 0;
+        }
+        else if (struct_result->length == 0 && struct_result->result) {
             free(struct_result->result);
-
+        }
         free(struct_result);
     }
-    mx_del_strarr(&sort->files);
-    mx_del_strarr(&sort->dirs);
+    if (sort->files)
+        mx_del_strarr(&sort->files);
+    if (sort->dirs)
+        mx_del_strarr(&sort->dirs);
     free(sort);
 }
 

@@ -3,7 +3,8 @@
 static void get_attributes(t_lattrib **lattrib, struct stat sb, int i);
 static void check_and_print_files(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort, int num_of_current_dir);
 static void check_and_open_dirs(t_lattrib **lattrib, t_flags *flags, t_sorted_odj *sort);
-static void total_blocks(t_flags *flags, t_lattrib **lattrib, t_sorted_odj *sort, int num_of_current_dir);
+static void total_blocks(t_flags *flags, t_lattrib **lattrib, t_sorted_odj *sort);
+static void print_dir_name(t_flags *flags, t_sorted_odj *sort, t_lattrib **lattrib, int num_of_current_dir);
 static int get_dir_len(char *obj, t_flags *flags);
 
 void mx_flag_l(t_flags *flags, t_sorted_odj *sort) {
@@ -25,6 +26,15 @@ static void check_and_open_dirs(t_lattrib **lattrib, t_flags *flags, t_sorted_od
         for (int j = 0; j < sort->len_of_dirs_array; j++) {
             d = opendir(sort->dirs[j]);
             sort->len_of_files_array = get_dir_len(sort->dirs[j], flags); // get number of files inside of dir
+            if (sort->len_of_files_array == 0 && sort->len_of_dirs_array > 1) {
+                if (j != 0) {
+                    mx_printchar('\n');
+                }
+                mx_printstr(sort->dirs[j]);
+                mx_printstr(":\n");
+                closedir(d);
+                continue;
+            }
             sort->files = (char **)malloc(sizeof(char *) * sort->len_of_files_array + 1);
             while((dir = readdir(d)) != NULL) {
                 if (dir->d_name[0] != '.') { // case without '-a' and '-A'
@@ -58,7 +68,7 @@ static void check_and_print_files(t_lattrib **lattrib, t_flags *flags, t_sorted_
     struct stat sb;
     char *temp_path_name = NULL;
 
-    if (sort->len_of_files_array != 0) {
+    if (sort->len_of_files_array > 0) {
         lattrib = (t_lattrib **)malloc(sizeof(t_lattrib *) * sort->len_of_files_array);
         for (int i = 0; i < sort->len_of_files_array; i++) {
             lattrib[i] = malloc(sizeof(t_lattrib));
@@ -75,18 +85,24 @@ static void check_and_print_files(t_lattrib **lattrib, t_flags *flags, t_sorted_
             }
             lstat(temp_path_name, &sb);
             get_attributes(lattrib, sb, i);
-            mx_get_acl_xattr(lattrib, i);
+            mx_get_acl_xattr(temp_path_name, lattrib, i);
+            if (S_ISLNK(sb.st_mode)) { // get link to output name
+                int links = 0;
+                lattrib[i]->link_str = mx_strnew(sb.st_size);
+                links = readlink(temp_path_name, lattrib[i]->link_str, sb.st_size);
+            }
             mx_strdel(&temp_path_name);
         }
-        if (sort->len_of_dirs_array != 0 && num_of_current_dir != -1) //***********************************************************************
-            total_blocks(flags, lattrib, sort, num_of_current_dir);
+        if (flags->count_obj == 0)
+            total_blocks(flags, lattrib, sort);
+        if (sort->len_of_dirs_array != 0 && num_of_current_dir != -1)
+            print_dir_name(flags, sort, lattrib, num_of_current_dir);
         mx_check_what_to_print(flags, lattrib, sort);
-        if (num_of_current_dir == -1)
+        if (num_of_current_dir == -1 && sort->len_of_dirs_array > 0)
             mx_printchar('\n');
         mx_strdel(&sort->files[sort->len_of_files_array - 1]);
         mx_del_strarr(&sort->files);
     }
-
 }
 
 static void get_attributes(t_lattrib **lattrib, struct stat sb, int i) {
@@ -109,8 +125,18 @@ static void get_attributes(t_lattrib **lattrib, struct stat sb, int i) {
     lattrib[i]->bl = sb.st_blocks;
 }
 
-static void total_blocks(t_flags *flags, t_lattrib **lattrib, t_sorted_odj *sort, int num_of_current_dir) {
+static void total_blocks(t_flags *flags, t_lattrib **lattrib, t_sorted_odj *sort) {
     int bl_sum = 0;
+
+    for (int i = 0; i < sort->len_of_files_array; i++) {
+        bl_sum += lattrib[i]->bl;
+    }
+    mx_printstr("total ");
+    mx_printint(bl_sum);
+    mx_printchar('\n');
+}
+
+static void print_dir_name(t_flags *flags, t_sorted_odj *sort, t_lattrib **lattrib, int num_of_current_dir) {
     if (num_of_current_dir != -1) {
         if (flags->count_obj != 1) {
             if (num_of_current_dir != 0)
@@ -118,12 +144,7 @@ static void total_blocks(t_flags *flags, t_lattrib **lattrib, t_sorted_odj *sort
             mx_printstr(sort->dirs[num_of_current_dir]);
             mx_printstr(":\n");
         }
-        for (int i = 0; i < sort->len_of_files_array; i++) {
-            bl_sum += lattrib[i]->bl;
-        }
-        mx_printstr("total ");
-        mx_printint(bl_sum);
-        mx_printchar('\n');
+        total_blocks(flags, lattrib, sort);
     }
 }
 

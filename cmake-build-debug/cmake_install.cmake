@@ -1,4 +1,4 @@
-# Install script for directory: /Users/imarchenko/Desktop/yksonzenko_uls-master
+# Install script for directory: /Users/imarchenko/Desktop/uls_15_09
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/imarchenko/Desktop/yksonzenko_uls-master/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
