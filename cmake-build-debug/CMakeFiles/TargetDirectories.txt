@@ -1,3 +1,0 @@
-/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/imarchenko/Desktop/uls_15_09/cmake-build-debug/CMakeFiles/uls_15_09.dir

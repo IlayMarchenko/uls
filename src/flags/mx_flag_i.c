@@ -10,7 +10,7 @@ void mx_flag_i(t_flags *flags) {
     t_result *struct_result = NULL;
     if (flags->number_of_obj == 0) {
         struct_result = one_obj(".", flags);
-        if (flags->switch_flags[5] != 1)
+        if (isatty(1))
             mx_output_by_size_of_wind(struct_result->result, struct_result->length);
         else
             mx_output_in_one_column(struct_result->result, struct_result->length);
@@ -77,9 +77,11 @@ static t_result *one_obj(char *obj, t_flags *flags) {
         mx_alphabet_sort2(array, len_of_array);
         if (flags->switch_flags[7] == 1)
             mx_array_reverse(array, len_of_array);
-        struct_result->result = (char **)malloc(sizeof(char *) * len_of_array);
-        for (int k = 0; k < len_of_array; ++k) {
-            struct_result->result[k] = mx_strdup(array[k]);
+        if (len_of_array != 0) {
+            struct_result->result = (char **) malloc(sizeof(char *) * len_of_array);
+            for (int k = 0; k < len_of_array; ++k) {
+                struct_result->result[k] = mx_strdup(array[k]);
+            }
         }
         struct_result->length = len_of_array;
         if (len_of_array != 0) {
@@ -144,7 +146,7 @@ static void two_and_more_obj(t_flags *flags) {
             mx_array_reverse(sort->dirs, sort->len_of_dirs_array);
     }
     if (sort->len_of_files_array != 0) {
-        if (flags->switch_flags[5] != 1)
+        if (isatty(1))
             mx_output_by_size_of_wind(sort->files, sort->len_of_files_array);
         else
             mx_output_in_one_column(sort->files, sort->len_of_files_array);
@@ -159,7 +161,7 @@ static void two_and_more_obj(t_flags *flags) {
         struct_result = one_obj(sort->dirs[j], flags);
         // --output--
         if (struct_result->permission) { // if we have permission for dir
-            if (flags->switch_flags[5] != 1)
+            if (isatty(1))
                 mx_output_by_size_of_wind(struct_result->result, struct_result->length);
             else
                 mx_output_in_one_column(struct_result->result, struct_result->length);
@@ -177,9 +179,6 @@ static void two_and_more_obj(t_flags *flags) {
                 mx_strdel(&struct_result->result[struct_result->length - 1]);
             mx_del_strarr(&struct_result->result);
             struct_result->length = 0;
-        }
-        else if (struct_result->length == 0 && struct_result->result) {
-            free(struct_result->result);
         }
         free(struct_result);
     }
